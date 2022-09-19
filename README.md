@@ -1,2 +1,2 @@
 # Sprint2
-Repositorio para a sprint2 
+Branch para arquivos antigos da primeira sprint do semestre(sprint1)
