@@ -1,0 +1,139 @@
+/* primeira tela */
+* {
+    margin: 0;
+    border: 0;
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header {
+    position: fixed;
+    background-color: rgba(1, 1, 1, 0.8);
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    /* border: solid 3px blue; */
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.container .navbar {
+    /* border: solid 3px red; */
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin-left: 4%;
+    font-size: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+.container #logo {
+    width: 10%;
+}
+
+.banner {
+    background-image: linear-gradient(0deg, white 3%, transparent 15%), url(./images/banner.jpeg);
+    /* filter: brightness(0.7); */
+    background-size: cover;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 3px red; */
+    padding-top: 150px;
+    color: white;
+    margin: auto;
+}
+
+.title .container {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 3px blueviolet; */
+    height: 400px;
+}
+
+.title h1 {
+    font-size: 70px;
+    font-weight: 900;
+    text-shadow: 2px 3px 6px black;
+    /* border: solid 3px blue; */
+}
+
+.title p {
+    font-size: 35px;
+    width: 40%;
+    text-shadow: 2px 3px 6px black;
+}
+
+
+/* sobre nós */
+
+#sobreNos {
+    margin-top: 100px;
+}
+
+.shopping_img {
+    width: 40%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.quemSomos {
+    margin-left: 40px;
+    text-align: center;
+}
+
+.quemSomos h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.quemSomos p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.quemSomos button {
+    padding: 13px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    align-self: center !important;
+    /* border: solid 3px red; */
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.pilares {
+    margin-top: 60px;
+    /* border: solid 3px red; */
+}
+
+.valores {
+    display: flex;
+    align-items: center;
+}
+
+.box p {
+    width: 80%;
+}
+
+.icones {
+    width: 10%;
+}
+
