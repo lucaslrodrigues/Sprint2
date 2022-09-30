@@ -3,7 +3,6 @@
     margin: 0;
     border: 0;
     font-family: 'Fredoka', sans-serif;
-    font-family: 'Oswald', sans-serif;
 }
 
 .header {
@@ -37,6 +36,11 @@
 li a {
     text-decoration: none;
     color: white;
+}
+
+li a:hover {
+    color: #f3ed73;
+    transition: 0.5s;
 }
 
 .container #logo {
@@ -81,34 +85,40 @@ li a {
 
 
 /* sobre nós */
-
 #sobreNos {
-    margin-top: 100px;
+    margin-top: 7%;
 }
 
 .shopping_img {
     width: 40%;
     border-radius: 30px;
-    box-shadow: 3px 3px 5px black;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .quemSomos {
     margin-left: 40px;
     text-align: center;
+    /* border: solid 1px black; */
 }
 
 .quemSomos h1 {
     font-size: 60px;
-    text-align: center;
+    margin: auto;
+    padding-bottom: 5px;
 }
 
 .quemSomos p {
     font-size: 18px;
+    display: flex;
     text-align: justify;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    text-indent: 2em;
 }
 
 .quemSomos button {
-    padding: 13px;
+    padding: 13px 25px;
     font-size: 20px;
     background-color: black;
     color: white;
@@ -119,21 +129,90 @@ li a {
     cursor: pointer;
 }
 
+.quemSomos button:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    color: #f7f3b7;
+}
+
+
+
+/* pilares */
 .pilares {
-    margin-top: 60px;
-    /* border: solid 3px red; */
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.pilares h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 85%;
+    margin: auto;
+    font-size: 40px;
 }
 
 .valores {
     display: flex;
+    justify-content: start;
     align-items: center;
 }
 
+.valores h3 {
+    margin-left: 4px;
+}
+
+.box {
+    width: 33.3%;
+    margin-left: 30px;
+    background-color: #D4CCCB;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.box:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+    background-color: #a19c9c;
+}
+
 .box p {
-    width: 80%;
+    width: 100%;
+    text-align: justify;
 }
 
 .icones {
     width: 10%;
+    border: black;
 }
 
+.star {
+    width: 10%;
+    padding-bottom: 5px;
+}
+
+/* footer */
+
+footer {
+    padding-top: 8%;
+    padding-bottom: 1%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: solid 3px red; */
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media i {
+    padding-top: 10px;
+}
+.systoyanka {
+    text-align: center;
+    font-size: 30px;
+}

@@ -1,2 +1,1 @@
-# Sprint2
-Repositorio para a sprint2 
+# site-institucional-sprint2
