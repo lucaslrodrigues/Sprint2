@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="simulador.css">
 </head>
-
 <body>
     <!-- banner -->
     <div class="banner">
@@ -27,8 +26,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="title">
             <div class="container">
                 <h1> Systoyanka </h1>
@@ -40,33 +37,25 @@
             </div>
         </div>
     </div>
-
     <div id="sobreNos_click"></div>
-
     <!-- sobre nós -->
-    <div id="sobreNos">
-        <div class="container">
-            <img class="shopping_img" src="images/shopping.jpg" alt="">
-
-            <div class="quemSomos">
-                <h1>
-                    Quem somos?
-                </h1>
-
-                <p>
-                    A systoyanka é uma empresa focada no ramo de monitoramento de estacionamentos de shopping centers,
-                    que tem como principal objetivo desenvolver sistemas que auxiliam no fluxo e identificação de vagas.
-                    Por meio de sensores de presença, somos capazes de consolidar dados e permitir tomadas de decisões
-                    estratégicas.
-                </p>
-
-                <button> Faça seu cadastro! </button>
-            </div>
+    <div class="sobreNos">
+        <div class="imagem_quem_somos">
+            <img class="shopping_img" src="images/shopping.jpg">
+        </div>
+        <div class="quemSomos">
+            <h1>
+                Quem somos?
+            </h1>
+            <span class="texto_quem_somos">
+                A systoyanka é uma empresa focada no ramo de monitoramento de estacionamentos de shopping centers,
+                que tem como principal objetivo desenvolver sistemas que auxiliam no fluxo e identificação de vagas.
+                Por meio de sensores de presença, somos capazes de consolidar dados e permitir tomadas de decisões
+                estratégicas.
+            </span>
+            <button> Faça seu cadastro! </button>
         </div>
     </div>
-
-
-
     <div class="pilares">
         <div class="container">
             <div class="box">
@@ -74,23 +63,19 @@
                     <img class="icones" src="images/star.png" alt="">
                     <h3> Missão </h3>
                 </div>
-
                 <p>
                     Nossa missão é agir com praticidade e agilidade, proporcionando rápidas tomadas de decisões aos nossos clientes
                 </p>
             </div>
-
             <div class="box">
                 <div class="valores">
                     <img class="icones" src="images/visao.png" alt="">
                     <h3> Visão </h3>
                 </div>
-
                 <p>
                     Ser referência no ramo de estacionamentos, visando sempre eficiência em nossos serviços.
                 </p>
             </div>
-
             <div class="box">
                 <div class="valores">
                     <img class="icones" src="images/valor.png" alt="">
@@ -101,10 +86,6 @@
                     Agimos com propósito, trabalhamos com simplicidade para entregarmos resultados eficazes, tendo como valor transparência e acesso. 
                 </p>
             </div>
-
-
-
-
     </div>
 
     <!-- <div class="container">
@@ -120,14 +101,52 @@
                 valor transparência e acesso.
             </p>
         </div> -->
-
     </div>
+    <!-- Simulador Financeiro -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,400&family=Yanone+Kaffeesatz:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Yanone+Kaffeesatz:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Yanone+Kaffeesatz:wght@600&display=swap');
+    </style>
+    <div class="tela3">
+        <!-- <div class="parte1">
+        </div> -->
+        <div class="corpo_calculadora">
+            <div class="container2">
+                <span class="titulo_simulador">Simule seus ganhos com nosso serviço<br>Tire suas duvidas</span>
+                <span class="subtitulo_simulador">Faça aqui uma simulação com dados aproximados de quanto seu estacionamento  <br>deixara
+                    de perder com nosso monitoramento,<br>encontre conosco os melhores preços para o seu negocio!
+                </span>
+                <div class="conteudo">
+                    <div class='componentes_simulador'>
+                        <div class="vagas">
+                            <span class="simulador_texto">Existem aproximadamente quantas vagas no estacionamento?</span>
+                            <input type="text" class="input_vaga">
+                        </div>
+                        <div class="valor">
+                            <span class="simulador_texto">Qual o valor da vaga por hora?</span>
+                            <div class="input_valor">
+                                <span class="simulador_texto">R$</span><input class="input_vaga" placeholder="00,00" inputmode="decimal" value="1000">
+                            </div>
+                    </div class=botao_area>
+                        <span>Clique para simular ➔</span>
+                        <button class="simular_botao">Simular</button>
+                    </div>
+                    <div class="resultado">
+                        <div class="resultado_calculo">
 
-
-
-
-
-
+                        </div>
+                        <div id="resultado_cadastro">
+                            Ficou interessado? <a href="cadastro.html">clique aqui</a> para se cadastrar e saber mais
+                        </div>
+                    </div>
+                </div>
+                <div class="explicacao_simulador">
+                    <span>Calculo realizado levando em consideração uma ausencia média de 15% no preenchimento das vagas de estácionamento</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

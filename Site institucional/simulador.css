@@ -1,0 +1,107 @@
+
+.container2{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Lato', sans-serif;
+    margin-top: 5%;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.corpo_calculadora{
+    border-top: solid 2px grey;
+    background-color: rgba(16, 16, 16, 0.867);
+}
+.conteudo{
+    color: white;
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 5px 10px 15px rgba(18, 18, 18, 0.345);
+}
+.conteudo .simulador_texto{
+    font-size: 16pt;
+}
+.componentes_simulador{
+    padding-left: 2%;
+    background-color: rgba(0, 0, 0, 0.375) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px 0px 0px 15px;
+}
+.conteudo .vagas, .valor{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px
+}
+.input_vaga{
+    background-color: transparent;
+    border: none;
+    width: 400px;
+    border-bottom: 1px solid #cccccc;
+    padding: 5px;
+    width: 300px;
+}
+.input_valor{
+    color: white;
+    display: flex;
+    font-size: 30pt;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Lato', sans-serif;
+}
+.simular_botao{
+    border: solid 3px #ffb302;
+    background-color: transparent;
+    color: #ffb302;
+    width: 220px;
+    height: 44px;
+    border-radius: 6px;
+    justify-self: start;
+    margin: 22px 10px;
+}
+.titulo_simulador{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 40pt;
+    font-weight: 10;
+    color: white;
+    align-self: flex-start;
+    margin-left: 13%;
+    border-bottom: solid 1px #ffb302;
+}
+.subtitulo_simulador{
+    align-self: flex-start;
+    padding: 30px 0px;
+    margin-left: 13%;
+    color: white;
+}
+
+/* Segunda parte calculadora */
+.resultado{
+    width: 60%;
+    background-color: white;
+    height: 100%;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 15px 15px 0px;
+}
+.resultado_cadastro{
+    justify-self: end;
+}
+a{
+    text-decoration: none;
+    color: #ffb302;
+}
+.explicacao_simulador{
+    font-size: 10pt;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}

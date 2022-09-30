@@ -6,20 +6,13 @@
     font-family: 'Oswald', sans-serif;
 }
 
+/* nav */
 .header {
     position: fixed;
     background-color: rgba(1, 1, 1, 0.8);
     width: 100%;
     z-index: 1000;
 }
-
-.container {
-    /* border: solid 3px blue; */
-    display: flex;
-    width: 90%;
-    margin: auto;
-}
-
 .container .navbar {
     /* border: solid 3px red; */
     width: 90%;
@@ -28,21 +21,27 @@
     align-items: center;
     list-style-type: none;
 }
-
 .navbar li {
     margin-left: 4%;
     font-size: 20px;
 }
-
 li a {
     text-decoration: none;
     color: white;
 }
-
 .container #logo {
     width: 10%;
 }
 
+/* corpo */
+
+.container {
+    /* border: solid 3px blue; */
+    display: flex;
+    width: 90%;
+    margin: auto;
+    border: solid 3px blue;
+}
 .banner {
     background-image: linear-gradient(0deg, white 3%, transparent 15%), url(./images/banner.jpeg);
     /* filter: brightness(0.7); */
@@ -80,29 +79,40 @@ li a {
 }
 
 
-/* sobre nós */
+/* Tela 2 - sobre nós */
 
-#sobreNos {
-    margin-top: 100px;
+.sobreNos {
+    width: 90%;
+    border: solid 3px red;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 700px;
+    justify-content: space-around;
 }
-
+/* .imagem_quem_somos{
+    width: 60%;
+    border: solid 3px yellow;
+} */
 .shopping_img {
-    width: 40%;
-    border-radius: 30px;
+    border: solid 3px yellow;
+    width: 500px;
+    border-radius: 6px;
     box-shadow: 3px 3px 5px black;
 }
 
 .quemSomos {
     margin-left: 40px;
     text-align: center;
+    border: solid 3px purple;
 }
 
 .quemSomos h1 {
     font-size: 60px;
-    text-align: center;
+    text-align:left;
 }
 
-.quemSomos p {
+.texto_quem_somos{
     font-size: 18px;
     text-align: justify;
 }
@@ -112,7 +122,7 @@ li a {
     font-size: 20px;
     background-color: black;
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     align-self: center !important;
     /* border: solid 3px red; */
     margin-top: 30px;
