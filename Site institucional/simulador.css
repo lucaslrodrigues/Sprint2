@@ -4,31 +4,54 @@
     font-family: 'Lato', sans-serif;
     margin-top: 5%;
     width: 100%;
-    height: 700px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    color: white;
+}
+.titulo_simulador{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 40pt;
+    font-weight: 10;
+}
+.box_titulo_simulador{
+    margin-left: 13%;
+    background-color: #4c4c4c;
+    padding: 60px 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #000000a4;
+    display: flex;
+    align-self: start;
+
+}
+.subtitulo_simulador{
+    align-self: flex-start;
+    padding: 30px 0px;
+    margin-left: 13%;
+    font-size: 17pt;
 }
 .corpo_calculadora{
     border-top: solid 2px grey;
-    background-color: rgba(16, 16, 16, 0.867);
+    background-color: #101010dd;
 }
 .conteudo{
-    color: white;
+    margin-top: 50px;
     margin: auto;
     width: 90%;
-    height: 60%;
+    height: 400px;
     display: flex;
     justify-content: space-around;
-    box-shadow: 5px 10px 15px rgba(18, 18, 18, 0.345);
+    box-shadow: 5px 10px 5px #12121258;
 }
 .conteudo .simulador_texto{
     font-size: 16pt;
 }
 .componentes_simulador{
     padding-left: 2%;
-    background-color: rgba(0, 0, 0, 0.375) ;
+    background-color: #00000060 ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -55,30 +78,19 @@
     font-family: 'Lato', sans-serif;
 }
 .simular_botao{
-    border: solid 3px #ffb302;
+    border: solid 3px #ffffff;
     background-color: transparent;
-    color: #ffb302;
+    color: #ffffff;
     width: 220px;
     height: 44px;
-    border-radius: 6px;
-    justify-self: start;
-    margin: 22px 10px;
+    border-radius: 10px;
 }
-.titulo_simulador{
-    font-family: 'Lato', sans-serif;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 40pt;
-    font-weight: 10;
-    color: white;
-    align-self: flex-start;
-    margin-left: 13%;
-    border-bottom: solid 1px #ffb302;
+.botao_area{
+    display: flex;
+    flex-direction: column;
 }
-.subtitulo_simulador{
-    align-self: flex-start;
-    padding: 30px 0px;
-    margin-left: 13%;
-    color: white;
+.simular_botao:hover{
+    background-color: #757575ed;
 }
 
 /* Segunda parte calculadora */
@@ -98,10 +110,16 @@
 }
 a{
     text-decoration: none;
-    color: #ffb302;
+    color: black;
+}
+a:hover{
+    color: #757575ed;
 }
 .explicacao_simulador{
-    font-size: 10pt;
+    font-size: 12pt;
     font-family: 'Fira Sans', sans-serif;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: flex;
+    align-self: start;
+    margin: 10px 13%;
 }

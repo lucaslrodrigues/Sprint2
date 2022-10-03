@@ -113,36 +113,46 @@
         </div> -->
         <div class="corpo_calculadora">
             <div class="container2">
-                <span class="titulo_simulador">Simule seus ganhos com nosso serviço<br>Tire suas duvidas</span>
+                <div class="box_titulo_simulador">
+                    <span class="titulo_simulador">Simule seus ganhos com nosso serviço<br>Tire suas duvidas</span>
+                </div>
                 <span class="subtitulo_simulador">Faça aqui uma simulação com dados aproximados de quanto seu estacionamento  <br>deixara
                     de perder com nosso monitoramento,<br>encontre conosco os melhores preços para o seu negocio!
                 </span>
-                <div class="conteudo">
-                    <div class='componentes_simulador'>
-                        <div class="vagas">
-                            <span class="simulador_texto">Existem aproximadamente quantas vagas no estacionamento?</span>
-                            <input type="text" class="input_vaga">
-                        </div>
-                        <div class="valor">
-                            <span class="simulador_texto">Qual o valor da vaga por hora?</span>
-                            <div class="input_valor">
-                                <span class="simulador_texto">R$</span><input class="input_vaga" placeholder="00,00" inputmode="decimal" value="1000">
+                <div class="simulador">
+                    <div class="conteudo">
+                        <div class='componentes_simulador'>
+                            <div class="vagas">
+                                <span class="simulador_texto">Existem aproximadamente quantas vagas no estacionamento?</span>
+                                <input type="text" class="input_vaga">
                             </div>
-                    </div class=botao_area>
-                        <span>Clique para simular ➔</span>
-                        <button class="simular_botao">Simular</button>
-                    </div>
-                    <div class="resultado">
-                        <div class="resultado_calculo">
-
+                            <div class="valor">
+                                <span class="simulador_texto">Qual o valor da vaga por hora?</span>
+                                <div class="input_valor">
+                                    <span class="simulador_texto">R$</span><input class="input_vaga" placeholder="00,00" inputmode="decimal" value="00,00">
+                                </div>
+                            </div>
+                                <div class="botao_area">
+                                    <span>Clique para simular ➔</span>
+                                    <button class="simular_botao">Simular</button>
+                                </div>
+                            </div>
+                        <div class="resultado">
+                            <div class="resultado_calculo">
+                                <span>Total ganho com a nossa proposta</span>
+                                <span>Valor em perdas</span>
+                                <span>Total ganho sem nossa proposta</span>
+                            </div>
+                            <div id="resultado_cadastro">
+                                Ficou interessado? <a href="cadastro.html">clique aqui</a> para se cadastrar e saber mais
+                            </div>
                         </div>
-                        <div id="resultado_cadastro">
-                            Ficou interessado? <a href="cadastro.html">clique aqui</a> para se cadastrar e saber mais
-                        </div>
                     </div>
-                </div>
-                <div class="explicacao_simulador">
-                    <span>Calculo realizado levando em consideração uma ausencia média de 15% no preenchimento das vagas de estácionamento</span>
+                    <div class="explicacao_simulador">
+                        <span>Calculo realizado levando em consideração uma ausencia média de 30% no preenchimento das vagas de estácionamento
+                        dado esse encontrado por nosco com base em pesquisas realizadas em diversos estacionamentos de shopping após vericarmos
+                        a media de vagas preenchidas ao longo dos dias</span>
+                    </div>
                 </div>
             </div>
         </div>
