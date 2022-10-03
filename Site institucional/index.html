@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="images/icone-head.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="simulador.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 <div class="navbar">
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobreNos_click">Sobre nós</a></li>
-                    <li><a href="">Simulador financeiro</a></li>
+                    <li><a href="#corpo_calculadora">Simulador financeiro</a></li>
                     <li><a href="login.html">Login</a></li> 
                 </div>
             </div>
@@ -110,8 +111,74 @@
     </div>
     </div>
     
+    <!-- Simulador -->
 
+</div>
+<!-- Simulador Financeiro -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Yanone+Kaffeesatz:wght@600&display=swap');
+    </style>
+    <div class="tela3">
+        <div id="corpo_calculadora">
+            <div class="container2">
+                <div class="box_titulo_simulador">
+                    <span class="titulo_simulador">Simule seus ganhos com nosso serviço<br>Tire suas duvidas</span>
+                </div>
+                <span class="subtitulo_simulador">Faça aqui uma simulação com dados aproximados de quanto seu estacionamento  <br>deixara
+                    de perder com nosso monitoramento,<br>encontre conosco as melhores estratégias para inpulsionar os lucros!
+                </span>
+                <div class="simulador">
+                    <div class="conteudo">
+                        <div class='componentes_simulador'>
 
+                            <!-- Inputs -->
+                            <div class="vagas">
+                                <span class="simulador_texto">Existem aproximadamente quantas vagas no estacionamento?</span>
+                                <input type="text" id="qtdvagas" class="input_vaga" value="1000" placeholder="0">
+                            </div>
+                            <div class="valor">
+                                <span class="simulador_texto">Qual o valor da vaga por hora?</span>
+                                <div class="conteudo_valor">
+                                    <span class="simulador_texto" style="font-size: 19pt;">R$</span><input id="valor" class="input_vaga" value='5.00' placeholder="00,00">
+                                </div>
+                            </div>
+                                <div class="botao_area">
+                                    <span>Clique para simular ➔</span>
+                                    <button class="simular_botao" onclick="calcular()">Simular</button>
+                                </div>
+                            </div>
+
+                            <!-- Area de resultados -->
+                        <div class="resultado">
+                            <div class="resultado_calculo">
+                                <div class="res">
+                                    <span><b>Total ganho com nossa proposta</b></span>
+                                    <span id="tot_ganho" class="res_estilo"></span>
+                                </div>
+                                <div class="res">
+                                    <span><b>Total ganho sem nossa proposta</b></span>
+                                    <span id="tot_sem" class="res_estilo"></span>
+                                </div>
+                                <div class="res">
+                                    <span><b>Valor em perdas</b></span>
+                                    <span id="valor_perdas" class="res_estilo"></span>
+                                </div>
+                            </div>
+                            <div id="resultado_cadastro">
+                                Ficou interessado? <a href="cadastro.html" class="redirecionar_cadastro">clique aqui</a> para se cadastrar e saber mais
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Descrição da calculadora -->
+                    <div class="explicacao_simulador">
+                        <span>*Calculo realizado levando em consideração uma ausencia média de 30% no preenchimento das vagas de estácionamento
+                        dado esse encontrado por nosco com base em pesquisas realizadas em diversos estacionamentos de shopping após vericarmos
+                        a media de vagas preenchidas ao longo dos dias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- footer -->
     <footer>
         <div class="container">
@@ -165,12 +232,21 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
-
 </body>
-
 </html>
+<script>
+    calcular()
+    function calcular() {
+        var valorhora = Number(valor.value) * 12
+        var semservico = Number(qtdvagas.value) * 0.7
+        var sem_ganho_mes = (semservico * valorhora) * 30
+        tot_sem.innerHTML = `<b>R$<span class="res_numeros">${sem_ganho_mes.toFixed(2)}</span></b>`
+    
+        var comservico = Number(qtdvagas.value)
+        var com_ganho_mes = (comservico * valorhora) * 30
+        tot_ganho.innerHTML = `<b>R$<span class="res_numeros">${com_ganho_mes.toFixed(2)}</span></b>`
+
+        var prejuizo =  com_ganho_mes - sem_ganho_mes
+        valor_perdas.innerHTML = `<b>R$<span class="res_numeros">${prejuizo.toFixed(2)}</span></b>`
+    }
+</script>
