@@ -172,3 +172,30 @@
     align-self: start;
     margin: 32px 13% 50px;
 }
+
+/* informacoes */
+.container3{
+    margin: auto;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px yellow;
+}
+.boxes_informacoes{
+    height: 100%;
+    width: 100%;
+    border: solid 3px yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+.caixas_informacoes{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.divisao_informacoes_esquerda{
+    background-color: blue;
+}
