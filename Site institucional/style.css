@@ -48,6 +48,7 @@ li a:hover {
 }
 
 .banner {
+    /* background-image: linear-gradient(to bottom, transparent 70%, #ffffff97, #ffffffec 95%, #fff), url(./images/banner.jpeg); */
     background-image: linear-gradient(0deg, white 1%, transparent 30%), url(./images/banner.jpeg);
     /* filter: brightness(0.7); */
     background-size: cover;
