@@ -58,7 +58,7 @@ li a:hover {
     display: flex;
     flex-direction: column;
     /* border: solid 3px red; */
-    padding-top: 150px;
+    padding-top: 180px;
     color: white;
     margin: auto;
 }
@@ -71,14 +71,14 @@ li a:hover {
 }
 
 .title h1 {
-    font-size: 70px;
+    font-size: 60pt;
     font-weight: 900;
     text-shadow: 2px 3px 6px black;
     /* border: solid 3px blue; */
 }
 
 .title p {
-    font-size: 35px;
+    font-size: 30pt;
     width: 40%;
     text-shadow: 2px 3px 6px black;
 }
@@ -103,13 +103,13 @@ li a:hover {
 }
 
 .quemSomos h1 {
-    font-size: 60px;
+    font-size: 40pt;
     margin: auto;
     padding-bottom: 5px;
 }
 
 .quemSomos p {
-    font-size: 18px;
+    font-size: 17pt;
     display: flex;
     text-align: justify;
     justify-content: center;
@@ -142,7 +142,7 @@ li a:hover {
 .pilares {
     margin: auto;
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .pilares h1 {
@@ -150,7 +150,7 @@ li a:hover {
     padding-bottom: 20px;
     width: 85%;
     margin: auto;
-    font-size: 40px;
+    font-size: 40pt;
 }
 
 .valores {
@@ -178,6 +178,7 @@ li a:hover {
 }
 
 .box p {
+    font-size: 14pt;
     width: 100%;
     text-align: justify;
 }
