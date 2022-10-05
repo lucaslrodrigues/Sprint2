@@ -47,108 +47,27 @@ li a:hover {
     width: 10%;
 }
 
-/* inicio banner nosso */
-
-
-#vai {
-    color: aliceblue;
-    margin: auto;
-    width: 800px;
-    height: 400px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+.screen .container {
+    border: purple solid 3px;
+    width: 100%;
+    /* height: auto; */
 }
 
-.container2 {
+.container img {
+    width: 50%;
+}
+
+.formulario_login {
+    border: solid 3px gray;
+    width: 100%;
+}
+
+section {
+    border: solid 3px rgb(255, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-
+    justify-content: center;
+    height: 100vh;
 }
 
-.caixa_login {
-    background: rgb(0, 0, 0);
-    width: 350px;
-    height: 300px;
-    display: flex;
-    border-radius: 30px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.login h1 {
-    color: rgb(221, 209, 42);
-    font-size: 30px;
-}
-
-.login {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    justify-content: space-around;
-}
-
-.login button {
-    margin-top: 10px;
-    background: rgb(199, 8, 8);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    width: 120px;
-    align-self: center;
-    font-size: 20px;
-}
-
-.login input {
-    padding: 10px 15px;
-    text-align: center;
-    border: 2px solid rgb(255, 252, 252);
-    border-radius: 10px;
-    font-size: 20px;
-    justify-content: space-around;
-}
-
-.login span {
-    font-size: 20px;
-}
-
-.title p {
-    font-size: 35px;
-    width: 40%;
-    text-shadow: 2px 3px 6px black;
-}
-
-/*  final do nosso banner*/
-
-/* footer */
-
-footer {
-    padding-top: 8%;
-    padding-bottom: 1%;
-}
-
-footer .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* border: solid 3px red; */
-}
-
-.social-media {
-    text-align: center;
-}
-
-.social-media i {
-    padding-top: 10px;
-}
-
-.systoyanka {
-    text-align: center;
-    font-size: 30px;
-}
