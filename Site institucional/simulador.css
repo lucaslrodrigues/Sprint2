@@ -119,6 +119,8 @@
     background-color: #757575ed;
     transition: 0.5s;
     transform: scale(1.02);
+    color: #f3ed73;
+
 }
 
 /* Segunda parte calculadora com resultados*/
@@ -173,29 +175,43 @@
     margin: 32px 13% 50px;
 }
 
-/* informacoes */
+/* TELA INFORMAÇÕES */
+
+
 .container3{
     margin: auto;
     width: 90%;
-    height: 500px;
+    height: 1000px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border: solid 3px yellow;
 }
 .boxes_informacoes{
-    height: 100%;
     width: 100%;
+    height: 100%;
     border: solid 3px yellow;
     display: flex;
     flex-direction: column;
-    justify-content: space-around
+}
+.area_titulo_informacoes{
+    background-color: rgba(207, 33, 207, 0.553);
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: 1% auto;
 }
 .caixas_informacoes{
-    padding: 10px;
+    height: 100%;
+    padding: 25px 0px;
     display: flex;
-    justify-content: space-between;
-}
+    background-color: red;
+    }
 .divisao_informacoes_esquerda{
     background-color: blue;
+    width: 70%;
+}
+.divisao_informacoes_direita{
+    background-color: rgba(57, 187, 98, 0.768);
+    width: 30%;
 }
