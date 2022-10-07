@@ -109,7 +109,5 @@ SELECT * FROM vagas JOIN sensor
 SELECT * FROM sensor JOIN leitura 
 	ON idSensor = fksensor;
     
--- SELECT * FROM shopping JOIN vagas 
-	ON idShopping = fkShopping
-    join endereço
-		ON idShopping = fkShopping;
+-- SELECT * FROM shopping JOIN vagas  ON idShopping = fkShopping join endereço ON idShopping = fkShopping;
+	

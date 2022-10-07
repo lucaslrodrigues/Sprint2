@@ -111,9 +111,7 @@ li a:hover {
 
 .quemSomos p {
     font-size: 17pt;
-    display: flex;
     text-align: justify;
-    justify-content: center;
     width: 80%;
     margin: auto;
     text-indent: 2em;
