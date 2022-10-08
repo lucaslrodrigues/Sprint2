@@ -74,10 +74,23 @@ section {
     padding: 20%;
 }
 
-section h1{
+section h1 {
     font-size: 30pt;
 }
 
+section button {
+    padding: 5% 30%;
+    border-radius: 20px;
+    font-size: 15pt;
+
+}
+
+.ipt_login {
+    padding: 7%;
+background-color: gray;
+}
+
 .login {
-    
-}  
+    display: flex;
+    flex-direction: column;
+}
