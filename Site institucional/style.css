@@ -1,4 +1,4 @@
-/* primeira tela */
+/* navbar */
 * {
     margin: 0;
     border: 0;
@@ -46,6 +46,8 @@ li a:hover {
 .container #logo {
     width: 10%;
 }
+
+/* primeira tela */
 
 .banner {
     /* background-image: linear-gradient(to bottom, transparent 70%, #ffffff97, #ffffffec 95%, #fff), url(./images/banner.jpeg); */

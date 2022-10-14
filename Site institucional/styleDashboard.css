@@ -1,0 +1,85 @@
+/* navbar */
+* {
+    margin: 0;
+    border: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.header {
+    /* position: fixed; */
+    background-color: rgba(1, 1, 1, 0.8);
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    /* border: solid 3px blue; */
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.container .navbar {
+    /* border: solid 3px red; */
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar li {
+    margin-left: 4%;
+    font-size: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {
+    color: #f3ed73;
+    transition: 0.5s;
+}
+
+.container #logo {
+    width: 10%;
+}
+
+
+/* dashboard */
+
+.intro {
+    border: solid blue 3px;
+    height: auto;
+    height: 85vh;
+}
+
+.menu {
+    border: solid red 3px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu img {
+    /* border: solid 2px gray; */
+    width: 70%;
+    background-color: black;
+}
+
+.dashboard {
+    border: solid 3px green;
+    width: 80%;
+}
