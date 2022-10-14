@@ -29,44 +29,101 @@
             <div class="boxes_1">
                 <div class="box_cad">
                     <span>Nome</span>            
-                    <input type="text" id="nome_ipt" placeholder="Systoyanka">
+                    <input type="text" id="nome_ipt" >
                 </div>
                 <div class="box_cad">
                     <span>CNPJ</span>
-                    <input type="text" id="cnpj_ipt" placeholder="00111222333344">
+                    <input type="text" id="cnpj_ipt" maxLength = "14">
                 </div>
                 <div class="box_cad">
-                    <span>Telefone</span>
-                    <input type="text" id="telefone_ipt" placeholder="11911110000">
+                    <span>Telefone Fixo</span>
+                    <input type="text" id="telefone_ipt" maxLength = "10">
                 </div>
             </div>
             <div class="boxes_2">
                 <div class="box_cad">
                     <span>Cidade</span>
-                    <input type="text" id="cidade_ipt" placeholder="São Paulo">
+                    <input type="text" id="cidade_ipt" >
                 </div>
                 <div class="box_cad">
                     <span>Bairro</span>
-                    <input type="text" id="bairro_ipt" placeholder="sys">
+                    <input type="text" id="bairro_ipt" >
                 </div>
                 <div class="box_cad">
                     <span>Cep</span>
-                    <input type="text" id="cep_ipt" placeholder="00011222">
+                    <input type="text" id="cep_ipt" maxLength = "8">
                 </div>
             </div>
             <div class="boxes_3">
                 <div class="box_cad">
                     <span>Login</span>
-                    <input id="login_ipt" type="email" placeholder="systoyanka@email.com">
+                    <input id="login_ipt" type="email" >
                 </div>
                 <div class="box_cad">
                     <span>Senha</span>
-                    <input id="senha_ipt" type="password" placeholder="********">
+                    <input id="senha_ipt" type="password" >
                 </div>
             </div>
         </div>
-        <button>Cadastrar</button>
+        <button onclick="cadastro()">Cadastrar</button>
         <span>Já possui cadastro? <a href="login.html">Faça login</a></span>
     </div>
 </body>
 </html>
+
+<script>
+    var quantidade = 0
+    function cadastro(){
+        var nome = nome_ipt.value
+        var cnpj = cnpj_ipt.value
+        var tel = telefone_ipt.value
+        var cidade = cidade_ipt.value
+        var bairro = bairro_ipt.value
+        var cep = cep_ipt.value
+        var login = login_ipt.value
+        var senha = senha_ipt.value
+        var quantidade = cnpj.length
+
+
+
+        if(nome == ""){
+            alert (`Por favor inserir um nome`)
+        }
+        else if(quantidade < 14){
+            alert(`Por favor inserir um CNPJ com 14 digitos`)
+            cnpj = Number(cnpj_ipt.value)
+                 if(Number.isNaN(cnpj) || cnpj == 0){
+             alert(`Por favor inserir um CNPJ valido`)
+        }
+    }
+    var quantidade = tel.length
+        if(quantidade < 10){
+            alert(`Por favor inserir um telefone com 10 digitos`)
+            tel = Number(tel_ipt.value)
+        }
+         else if(Number.isNaN(tel) || tel == 0){
+            alert(`Por favor inserir um telefone fixo valido`)
+        }
+        else if(cidade == ""){
+            alert (`Por favor inserir uma cidade`)
+        }
+        else if(bairro == ""){
+            alert (`Por favor inserir um bairro`)
+        }
+        quantidade = cep.length
+        if(quantidade < 8){
+            alert(`inserir um CEP com 8 digitos`)
+            cep = Number (cep_ipt.value)
+        }
+        else if(Number.isNaN(cep) || cep == 0){
+            alert (`Por favor inserir um CEP valido`)
+        }
+        else if(login == ""){
+            alert (`Por favor inserir um login`)
+        }
+        else if (senha == ""){
+            alert (`Por favor inserir uma senha`)
+        }
+
+    }
+</script>
