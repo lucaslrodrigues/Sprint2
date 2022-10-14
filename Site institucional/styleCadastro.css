@@ -1,0 +1,60 @@
+
+.text_cadastrar{
+    align-self: center;
+    text-align: center;
+}
+.container_cadastro{
+    background-color: #FFF;
+    padding: 50px;
+    width: 40%;
+    margin: auto;
+    margin-top: 2%;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boxes_cadastro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.box_cad{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+}
+.boxes_1, .boxes_2,.boxes_3{
+    display: flex;
+}
+
+.container_cadastro input{
+    background-color: #D4CCCB;
+    width: 150px;
+    margin-top: 5px;
+    padding: 7%;
+    border-radius: 17px;
+}
+.container_cadastro button{
+    background-color: #D4CCCB;
+    margin: 15px 0px 10px 0px;
+    padding: 2% 10%;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 900;
+}
+.container_cadastro button:hover{
+    background-color: #a49e9e;
+}
+.container_cadastro a{
+    text-decoration: none;
+    color: #000000;
+}
+.container_cadastro a:hover{
+    color: #a49e9e;
+}

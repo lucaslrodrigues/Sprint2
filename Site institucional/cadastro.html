@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCadastro.css">
+    <link rel="stylesheet" href="styleLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <img id="logo" src="images/logo-nav.png" alt="logotipo_systoyanka">
+            <div class="navbar">
+                <li><a href="index.html">Início</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="container_cadastro">
+        <div class="titulos_cad">
+            <span class="text_cadastrar">
+                <h1>Crie sua conta na systoyanka.</h1><br>
+                <h2>É rapido e fácil!</h2>
+            </span>
+        </div>
+        <div class='boxes_cadastro'>
+            <div class="boxes_1">
+                <div class="box_cad">
+                    <span>Nome</span>            
+                    <input type="text" id="nome_ipt" placeholder="Systoyanka">
+                </div>
+                <div class="box_cad">
+                    <span>CNPJ</span>
+                    <input type="text" id="cnpj_ipt" placeholder="00111222333344">
+                </div>
+                <div class="box_cad">
+                    <span>Telefone</span>
+                    <input type="text" id="telefone_ipt" placeholder="11911110000">
+                </div>
+            </div>
+            <div class="boxes_2">
+                <div class="box_cad">
+                    <span>Cidade</span>
+                    <input type="text" id="cidade_ipt" placeholder="São Paulo">
+                </div>
+                <div class="box_cad">
+                    <span>Bairro</span>
+                    <input type="text" id="bairro_ipt" placeholder="sys">
+                </div>
+                <div class="box_cad">
+                    <span>Cep</span>
+                    <input type="text" id="cep_ipt" placeholder="00011222">
+                </div>
+            </div>
+            <div class="boxes_3">
+                <div class="box_cad">
+                    <span>Login</span>
+                    <input id="login_ipt" type="email" placeholder="systoyanka@email.com">
+                </div>
+                <div class="box_cad">
+                    <span>Senha</span>
+                    <input id="senha_ipt" type="password" placeholder="********">
+                </div>
+            </div>
+        </div>
+        <button>Cadastrar</button>
+        <span>Já possui cadastro? <a href="login.html">Faça login</a></span>
+    </div>
+</body>
+</html>
