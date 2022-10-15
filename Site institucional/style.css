@@ -36,6 +36,7 @@
 li a {
     text-decoration: none;
     color: white;
+    transition: 1s;
 }
 
 li a:hover {
@@ -219,3 +220,4 @@ footer .container {
     text-align: center;
     font-size: 30px;
 }
+

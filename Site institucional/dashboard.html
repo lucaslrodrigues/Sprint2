@@ -36,33 +36,64 @@
         <div class="container">
             <div class="menu">
                 <div class="menu_logo">
-                    <img src="images/" alt="">
+                    <img src="images/logo-dashboard .png" alt="">
 
                     <h1>
                         Systoyanka
                     </h1>
                 </div>
 
-                <h1>
-                    Menu
-                </h1>
+                <div class="topicos">
+                    <p>
+                        Menu
+                    </p>
+
+                    <p>
+                        Gráficos
+                    </p>
+
+                    <button class="sair"> Sair </button>
+                </div>
 
             </div>
 
             <div class="dashboard">
-                <div class="blocos">
+                <div class="alerta">
                     <section>
-                        <h1>Bloco A</h1>
-                    </section>
-                    <section>
-                        <h1>Bloco B</h1>
+                        <h1>
+                            Porcentagem de ocupação: <b>50%</b>
+                        </h1>
+                        <p>
+                            Dados em tempo real
+                        </p>
                     </section>
                 </div>
 
-                <div class="blocos">
-                    <section></section>
-                    <section></section>
+
+                <div class="andar">
+                    <h1>
+                        Andares com baixa ocupação!
+                    </h1>
+                    <div class="box">
+                        <section>
+                            <h1>1º Andar</h1>
+
+                            <div>
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h1>2º Andar</h1>
+
+                            <div>
+                                <canvas id="myChart2"></canvas>
+                            </div>
+
+                        </section>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -136,5 +167,64 @@
         </div>
     </footer> -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45],
+        }]
+
+    };
+
+    const data2 = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 5, 3, 25, 40, 20, 35],
+        }]
+
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {}
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+</script>
+
+
 
 </html>

@@ -47,22 +47,21 @@ li a:hover {
     width: 10%;
 }
 
-
-/* dashboard */
-
+/* intro */
 .intro {
-    border: solid blue 3px;
-    height: auto;
-    height: 85vh;
+    height: 83vh;
+    margin-top: 10px;
 }
+/* menu */
 
 .menu {
-    border: solid red 3px;
+    /* border: solid red 3px; */
     width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 83vh;
+    background-color: #4c4c4c;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .menu_logo {
@@ -70,16 +69,89 @@ li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 7%;
 }
 
 .menu img {
     /* border: solid 2px gray; */
-    width: 70%;
-    background-color: black;
+    width: 30%;
+    padding: 10px;
+    height: auto;
+    background-color: #101010dd;
+    border-radius: 100% 100%;
 }
 
-.dashboard {
-    border: solid 3px green;
-    width: 80%;
+.topicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
 }
+
+.topicos p {
+    margin: 2%;
+    font-size: 25px;
+}
+
+.sair {
+    color: white;
+    background-color: red;
+    text-align: center;
+    margin-top: 60%;
+    font-size: 25px;
+    padding: 2% 20%;
+    border-radius: 20px;
+}
+
+
+/* dashboard */
+
+.dashboard {
+    /* border: solid 3px green; */
+    width: 80%;
+    background-color: #101010dd;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.alerta {
+    display: flex;
+    justify-content: center;
+}
+
+.alerta section {
+    font-weight: 900;
+    /* border: 3px solid blue; */
+    width: 50%;
+    padding: 1%;
+    margin-top: 2%;
+    background-color: #4c4c4c;
+    border-radius: 20px;
+}
+
+.alerta section h1 {    
+    /* border: #f3ed73 3px solid; */
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.alerta section p {
+    text-align: end;
+    font-style: italic;
+    color: white;
+    margin-top: 2%;
+}
+
+/* andar */
+
+.andar {
+    border: solid 3px red;
+}
+
+.box {
+    border: solid 3px blue;
+    width: 50%;
+}
+
