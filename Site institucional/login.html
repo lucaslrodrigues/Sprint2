@@ -39,12 +39,12 @@
 
                         <div class="login">
                             <label for="email"> E-mail:</label>
-                            <input class="ipt_login" id="input_login" type="email" placeholder="exemplo@email.com" onfocus="estilizar()">
+                            <input class="ipt_login" id="input_login" type="email" placeholder="exemplo@email.com" oninput="mudar()">
                             <label for="senha">Senha:</label>
-                            <input class="ipt_login" id="input_senha" type="password" placeholder="********" onfocus="estilizar()">
+                            <input class="ipt_login" id="input_senha" type="password" placeholder="********" onfocus="mudar()">
                         </div>
 
-
+                        <div id="msg_erro" style="color: red; display: none;">Seu login ou senha estão incorretos!</div>
                         <button onclick="entrar()">ENTRAR</button>
 
                         <div class="outros">
@@ -65,21 +65,22 @@
     function entrar(){
         var login = input_login.value;
         var senha = input_senha.value;
-        var usuario = 'systoyanka@gmail.com';
+        var usuario = 'systoyanka@email.com';
         var senha_usu = 'systoyanka'
 
         if(login == '' || senha == '' || login != usuario || senha != senha_usu){
-            alert('Login ou senha inválidos!')
-            input_login.style.border = 'solid 2px red';
-            input_senha.style.border = 'solid 2px red';
-            senha.value = '';
+            input_login.style.border = 'solid 1px red';
+            input_senha.style.border = 'solid 1px red';
+            input_senha.value = '';
+            msg_erro.style.display = 'block';
+            // msg_erro.innerHTML = "Seu login ou senha estão incorretos!"
         }else{
             window.location.href = "cadastro.html";
         }
-        function estilizar(){
-            alert('funfou')
-            input_login.style.border = 'transparent';
-            input_senha.style.border = 'none';
-        }
+    }
+    function mudar(){
+        input_login.style.border = 0;
+        input_senha.style.border = 0;
+        msg_erro.style.display = 'none';
     }
 </script>

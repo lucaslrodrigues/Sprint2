@@ -140,3 +140,7 @@ label {
     color: #a49e9e;
     cursor: pointer;
 }
+#msg_erro{
+    margin-top: -20px;
+    margin-bottom: 8px;
+}

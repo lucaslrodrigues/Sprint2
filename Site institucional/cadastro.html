@@ -29,39 +29,39 @@
             <div class="boxes_1">
                 <div class="box_cad">
                     <span>Nome</span>            
-                    <input type="text" id="nome_ipt" >
+                    <input type="text" id="nome_ipt" placeholder="Systoyanka" oninput="mudar()">
                 </div>
                 <div class="box_cad">
                     <span>CNPJ</span>
-                    <input type="text" id="cnpj_ipt" maxLength = "14">
+                    <input type="text" id="cnpj_ipt" maxLength = "14" placeholder="00.000.000/0000-00" oninput="mudar()">
                 </div>
                 <div class="box_cad">
                     <span>Telefone Fixo</span>
-                    <input type="text" id="telefone_ipt" maxLength = "10">
+                    <input type="text" id="telefone_ipt" maxLength = "10" placeholder="(00)0000-0000" oninput="mudar()">
                 </div>
             </div>
             <div class="boxes_2">
                 <div class="box_cad">
                     <span>Cidade</span>
-                    <input type="text" id="cidade_ipt" >
+                    <input type="text" id="cidade_ipt" placeholder="systoyanka" oninput="mudar()">
                 </div>
                 <div class="box_cad">
                     <span>Bairro</span>
-                    <input type="text" id="bairro_ipt" >
+                    <input type="text" id="bairro_ipt" placeholder="systoyanka" oninput="mudar()">
                 </div>
                 <div class="box_cad">
                     <span>Cep</span>
-                    <input type="text" id="cep_ipt" maxLength = "8">
+                    <input type="text" id="cep_ipt" maxLength = "8" placeholder="0000-000" oninput="mudar()">
                 </div>
             </div>
             <div class="boxes_3">
                 <div class="box_cad">
                     <span>Login</span>
-                    <input id="login_ipt" type="email" >
+                    <input id="login_ipt" type="email" placeholder="exemplo@email.com" oninput="mudar()">
                 </div>
                 <div class="box_cad">
                     <span>Senha</span>
-                    <input id="senha_ipt" type="password" >
+                    <input id="senha_ipt" type="password" placeholder="********" oninput="mudar()">
                 </div>
             </div>
         </div>
@@ -82,48 +82,64 @@
         var cep = cep_ipt.value
         var login = login_ipt.value
         var senha = senha_ipt.value
-        var quantidade = cnpj.length
 
-
+        var cnpj_num = Number(cnpj)
+        var tel_num = Number(tel)
+        var cep_num = Number(cep)
 
         if(nome == ""){
             alert (`Por favor inserir um nome`)
+            nome_ipt.style.border = 'solid 1px red';
         }
-        else if(quantidade < 14){
+        else if(cnpj.length < 14){
             alert(`Por favor inserir um CNPJ com 14 digitos`)
-            cnpj = Number(cnpj_ipt.value)
-                 if(Number.isNaN(cnpj) || cnpj == 0){
-             alert(`Por favor inserir um CNPJ valido`)
+            cnpj_ipt.style.border = 'solid 1px red';
         }
-    }
-    var quantidade = tel.length
-        if(quantidade < 10){
+        else if(Number.isNaN(cnpj_num) || cnpj_num == 0){
+            alert(`CNPJ "${cnpj}" inválido! O CNPJ deve ser composto apenas por números`)
+            cnpj_ipt.style.border = 'solid 1px red';
+        }
+        else if(tel.length < 10){
             alert(`Por favor inserir um telefone com 10 digitos`)
-            tel = Number(tel_ipt.value)
+            telefone_ipt.style.border = 'solid 1px red';
         }
-         else if(Number.isNaN(tel) || tel == 0){
-            alert(`Por favor inserir um telefone fixo valido`)
+        else if(Number.isNaN(tel_num) || tel_num == 0){
+            alert(`Telefone ${tel} inválido! O telefone deve ser composto apenas por números`)
+            telefone_ipt.style.border = 'solid 1px red';
         }
         else if(cidade == ""){
             alert (`Por favor inserir uma cidade`)
+            cidade_ipt.style.border = 'solid 1px red';
         }
         else if(bairro == ""){
             alert (`Por favor inserir um bairro`)
+            bairro_ipt.style.border = 'solid 1px red';
         }
-        quantidade = cep.length
-        if(quantidade < 8){
+        else if(cep.length < 8){
             alert(`inserir um CEP com 8 digitos`)
-            cep = Number (cep_ipt.value)
+            cep_ipt.style.border = 'solid 1px red';
         }
-        else if(Number.isNaN(cep) || cep == 0){
-            alert (`Por favor inserir um CEP valido`)
+        else if(Number.isNaN(cep_num) || cep_num == 0){
+            alert (`CEP "${cep}" invalido! O CEP deve ser composto apenas por números`)
+            cep_ipt.style.border = 'solid 1px red';
         }
         else if(login == ""){
             alert (`Por favor inserir um login`)
+            login_ipt.style.border = 'solid 1px red';
         }
         else if (senha == ""){
             alert (`Por favor inserir uma senha`)
+            senha_ipt.style.border = 'solid 1px red';
         }
-
+    }
+    function mudar(){
+        nome_ipt.style.border = '0';
+        cnpj_ipt.style.border = '0';
+        telefone_ipt.style.border = '0';
+        cidade_ipt.style.border = '0';
+        bairro_ipt.style.border = '0';
+        cep_ipt.style.border = '0';
+        login_ipt.style.border = '0';
+        senha_ipt.style.border = '0';
     }
 </script>

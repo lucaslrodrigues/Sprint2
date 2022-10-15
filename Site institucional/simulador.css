@@ -183,7 +183,6 @@
     width: 90%;
     height: 1100px;
     display: flex;
-    border: solid 3px yellow;
 }
 .boxes_informacoes{
     width: 100%;
@@ -236,4 +235,9 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: justify;
+}
+.imagem_info{
+    width: 200px;
+    align-self: center;
+    justify-self: center;
 }
