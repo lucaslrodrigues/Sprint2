@@ -39,13 +39,13 @@
 
                         <div class="login">
                             <label for="email"> E-mail:</label>
-                            <input class="ipt_login" type="email" placeholder="exemplo@email.com">
+                            <input class="ipt_login" id="input_login" type="email" placeholder="exemplo@email.com" onfocus="estilizar()">
                             <label for="senha">Senha:</label>
-                            <input class="ipt_login" type="password" placeholder="********">
+                            <input class="ipt_login" id="input_senha" type="password" placeholder="********" onfocus="estilizar()">
                         </div>
 
 
-                        <button>ENTRAR</button>
+                        <button onclick="entrar()">ENTRAR</button>
 
                         <div class="outros">
                             <p><a href="cadastro.html">Cadastre-se</a></p>
@@ -61,3 +61,25 @@
 </body>
 
 </html>
+<script>
+    function entrar(){
+        var login = input_login.value;
+        var senha = input_senha.value;
+        var usuario = 'systoyanka@gmail.com';
+        var senha_usu = 'systoyanka'
+
+        if(login == '' || senha == '' || login != usuario || senha != senha_usu){
+            alert('Login ou senha inválidos!')
+            input_login.style.border = 'solid 2px red';
+            input_senha.style.border = 'solid 2px red';
+            senha.value = '';
+        }else{
+            window.location.href = "cadastro.html";
+        }
+        function estilizar(){
+            alert('funfou')
+            input_login.style.border = 'transparent';
+            input_senha.style.border = 'none';
+        }
+    }
+</script>
