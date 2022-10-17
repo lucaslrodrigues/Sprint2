@@ -3,40 +3,42 @@ use sprint2;
 Create table Endereço (
 idEndereço int primary key auto_increment,
 Cidade varchar(45),
-Estado varchar(45),
 Bairro varchar (45),
 CEP varchar (9),
- fkshopping int,constraint foreign key fkshopping (fkshopping) references Shopping (idshopping) 
+ fkshoppingE int,
+ constraint foreign key fkshoppingE (fkshoppingE) references Shopping (idshopping) 
 );
+
 
 create table Shopping (
 idshopping int primary key auto_increment,
 Nome varchar(45),
 CNPJ char(14) unique,
-Telefone char (10),
-Login varchar (45) unique,
-senha varchar (45) 
-);
-
-create table Vagas (
-idvagas int primary key auto_increment,
-QTDvagas varchar(4),
-Andar char(2),
-Bloco varchar (4),
- fkshopping int,constraint foreign key fkshopping (fkshopping) references Shopping (idshopping)
+Telefone char (10)
 );
 
 create table Sensor (
-idsensor int primary key auto_increment,
-Nome varchar(45),
-fkvaga int,constraint foreign key fkvaga (fkvaga) references vagas(idvagas)
+idSensor int primary key auto_increment,
+Andar char(2),
+Bloco varchar (4),
+ fkShoppingS int,constraint foreign key fkshoppingS (fkshoppingS) references Shopping (idshopping)
 );
 
 create table Leitura(
-idresposta int primary key auto_increment,
+idResposta int,
 Dt_hora DATETIME, 
 Retorno int,
- fksensor int,constraint foreign key fksensor (fksensor) references sensor (idsensor)
+ fkSensor int,constraint foreign key fkSensor (fkSensor) references Sensor (idSensor),
+ primary key (idResposta, fkSensor)
+);
+
+create table Usuario (
+idUsuario int,
+Login varchar(45),
+Senha varchar(45),
+Tipo varchar(45),
+ fkShopping int,constraint foreign key fkShopping (fkShopping) references Shopping (idshopping),
+ primary key (idUsuario, fkShopping)
 );
 
 insert into Shopping (Nome, CNPJ, Telefone, Login, senha) values
@@ -108,6 +110,3 @@ SELECT * FROM vagas JOIN sensor
     
 SELECT * FROM sensor JOIN leitura 
 	ON idSensor = fksensor;
-    
--- SELECT * FROM shopping JOIN vagas  ON idShopping = fkShopping join endereço ON idShopping = fkShopping;
-	
