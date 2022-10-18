@@ -3,20 +3,22 @@
     margin: 0;
     border: 0;
     font-family: 'Fredoka', sans-serif;
-    font-size: 20px;
 }
+
 .header {
     /* position: fixed; */
     background-color: rgba(1, 1, 1, 0.8);
     width: 100%;
     z-index: 1000;
 }
+
 .container {
     /* border: solid 3px blue; */
     display: flex;
     width: 90%;
     margin: auto;
 }
+
 .container .navbar {
     /* border: solid 3px red; */
     width: 90%;
@@ -25,35 +27,47 @@
     align-items: center;
     list-style-type: none;
 }
+
 .navbar li {
     margin-left: 4%;
     font-size: 20px;
+    color: white;
 }
+
 li a {
     text-decoration: none;
     color: white;
 }
+
 li a:hover {
     color: #f3ed73;
     transition: 0.5s;
 }
+
 .container #logo {
     width: 10%;
 }
+
+
+
+
+
 /* intro */
 .intro {
     margin-top: 10px;
 }
+
 /* menu */
 .menu {
     /* border: solid red 3px; */
     width: 7%;
-    height: 83vh;
+    height: 40vh;
     background-color: #4c4c4c;
     color: white;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
+
 .menu_logo {
     display: flex;
     flex-direction: row;
@@ -61,27 +75,31 @@ li a:hover {
     align-items: center;
     margin-top: 20%;
 }   
+
 .menu i {
     font-size: 25px;
     margin: 7%;
 }
+
 .topicos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 20%;
     margin-bottom: 200px;
 }
+
 .topicos p {
     margin: 2%;
     font-size: 20px;
 }
+
 .sair {
     color: white;
     background-color: red;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 130%;
     font-size: 18px;
     padding: 10% 20%;
     border-radius: 20px;

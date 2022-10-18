@@ -31,6 +31,7 @@
 .navbar li {
     margin-left: 4%;
     font-size: 20px;
+    color: white;
 }
 
 li a {
@@ -60,7 +61,7 @@ li a:hover {
 .menu {
     /* border: solid red 3px; */
     width: 7%;
-    height: 83vh;
+    height: 40vh;
     background-color: #4c4c4c;
     color: white;
     border-top-left-radius: 20px;
@@ -85,7 +86,7 @@ li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 20%;
     margin-bottom: 200px;
 }
 
@@ -98,7 +99,7 @@ li a:hover {
     color: white;
     background-color: red;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 130%;
     font-size: 18px;
     padding: 10% 20%;
     border-radius: 20px;
