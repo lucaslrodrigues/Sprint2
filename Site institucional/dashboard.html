@@ -39,13 +39,13 @@
                 </div>
 
                 <div class="topicos">
-                    <i class="fa-solid fa-bars"></i>
+                    <a style="color: white;" href="dashboard.html"><i class="fa-solid fa-bars"></i></a>
 
-                    <i class="fa-solid fa-chart-simple"></i>
+                    <a style="color: white;" href="dashboard2.html"><i class="fa-solid fa-chart-simple"></i></a>
 
                     <i class="fa-solid fa-gear"></i>
 
-                    <button class="sair"> Sair </button>
+                    <button class="sair" onclick="exit()"> Sair </button>
                 </div>
 
             </div>
@@ -279,8 +279,12 @@
 
     document.getElementById('data').innerHTML = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} às ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
 </script>
-
-
+<!-- Botão -->
+<script>
+    function exit(){
+        window.location.href = "index.html";
+    }
+</script>
 
 
 </html>

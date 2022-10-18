@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistoyanka</title>
+    <link rel="stylesheet" href="styleDashboard2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icone-head.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <img id="logo" src="images/logo-nav.png" alt="">
+            <div class="navbar">
+                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+            </div>
+        </div>
+    </div>
+    <div class="intro">
+        <div class="container">
+            <div class="menu">
+                <div class="menu_logo">
+                        <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="topicos">
+                    <a style="color: white;" href="dashboard.html"><i class="fa-solid fa-bars"></i></a>
+                    <a style="color: white;" href="dashboard2.html"><i class="fa-solid fa-chart-simple"></i></a>
+                    <i class="fa-solid fa-gear"></i>
+                    <button class="sair"> Sair </button>
+                </div>
+            </div>
+            <div class="dashboard">                
+                <div class="andar">
+                    <div class="container">
+                        <div class="boxes_andar">
+
+                            <!-- Andar 1 -->
+                            <a onclick="mostrar1()"><div class="box_andar">
+                                <span>Andar 1</span>
+                                <div class="box_andar_info">
+                                    <span>Ocupação do andar: <label id="percent1"><b>31%</b></label></span>
+                                    <img class="seta" src="images/seta vermelha.png">
+                                </div>
+                            </div></a>
+                            <div id="esconder1" style="display: none;">
+                                <div class="blocos">
+                                    <div class="boxes_blocos">
+                                        <span>Bloco A</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>7%</b></label></span>
+                                            <img class="seta" src="images/seta vermelha.png">
+                                        </div>
+                                    </div>
+                                    <div class="boxes_blocos">
+                                        <span>Bloco B</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>22%</b></label></span>
+                                            <img class="seta" src="images/seta vermelha.png">
+                                        </div>
+                                    </div>
+                                    <div class="boxes_blocos">
+                                        <span>Bloco C</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>68%</b></label></span>
+                                            <img class="seta" src="images/seta verde.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Andar 2 -->
+                            <a onclick="mostrar2()"><div class="box_andar">
+                                <span>Andar 2</span>
+                                <div class="box_andar_info">
+                                    <span>Ocupação do andar: <label id="percent1"><b>59%</b></label></span>
+                                    <img class="seta" src="images/seta vermelha.png">
+                                </div>
+                            </div></a>
+                            <div id="esconder2" style="display: none;">
+                                <div class="blocos">
+                                    <div class="boxes_blocos">
+                                        <span>Bloco A</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>22%</b></label></span>
+                                            <img class="seta" src="images/seta vermelha.png">
+                                        </div>
+                                    </div>
+                                    <div class="boxes_blocos">
+                                        <span>Bloco B</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>70%</b></label></span>
+                                            <img class="seta" src="images/seta verde.png">
+                                        </div>
+                                    </div>
+                                    <div class="boxes_blocos">
+                                        <span>Bloco C</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>93%</b></label></span>
+                                            <img class="seta" src="images/seta verde.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Andar 3 -->
+                            <a onclick="mostrar3()">
+                            <div class="box_andar">
+                                <span>Andar 3</span>
+                                <div class="box_andar_info">
+                                    <span>Ocupação do andar: <label id="percent3"><b>85%</b></label></span>
+                                    <img class="seta" src="images/seta verde.png">
+                                </div>
+                            </div></a>
+
+                            <div id="esconder3" style="display: none;">
+                                <div class="blocos">
+                                    <div class="boxes_blocos">
+                                        <span>Bloco A</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>70%</b></label></span>
+                                            <img class="seta" src="images/seta verde.png">
+                                        </div>
+                                    </div>
+                                    <div class="boxes_blocos">
+                                        <span>Bloco B</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>73%</b></label></span>
+                                            <img class="seta" src="images/seta verde.png">
+                                        </div>
+                                    </div>
+                                    <div class="boxes_blocos">
+                                        <span>Bloco C</span>
+                                        <div class="box_bloco">
+                                            <span>Ocupação do bloco: <label id="percent1"><b>97%</b></label></span>
+                                            <img class="seta" src="images/seta verde.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="box-footer">
+                <p><b>Produtos</b></p>
+                <p>Sensores</p>
+                <p>Segurança</p>
+                <p>Sistema</p>
+            </div>
+            <div class="box-footer">
+                <p><b>Siga-nos em nossas redes sociais!</b></p>
+                <div class="social-media">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <p class="systoyanka">Systoyanka</p>
+            </div>
+            <div class="box-footer">
+                <p><b>Mais informações</b></p>
+                <p>Contrato</p>
+                <p>Termos e condições</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var cont1 = 1;
+    var cont2 = 1;
+    var cont3 = 1;
+
+    function mostrar1(){
+        esconder2.style.display = "none";
+        esconder3.style.display = "none";
+        cont1 ++
+        if(cont1 %2 == 0){
+            esconder1.style.display = "block";
+            cont2 = 1;
+            cont3 = 1;
+        }else{
+            esconder1.style.display = "none";
+        }
+    }
+    function mostrar2(){
+        esconder1.style.display = "none";
+        esconder3.style.display = "none";
+        cont2 ++
+        if(cont2 %2 == 0){
+            esconder2.style.display = "block";
+            cont1 = 1;
+            cont3 = 1;
+        }else{
+            esconder2.style.display = "none";
+        }
+    }
+    function mostrar3(){
+        esconder1.style.display = "none";
+        esconder2.style.display = "none";
+        cont3 ++
+        if(cont3 %2 == 0){
+            esconder3.style.display = "block";
+            cont1 = 1;
+            cont2 = 1; 
+        }else{
+            esconder3.style.display = "none";
+        }
+    }
+</script>

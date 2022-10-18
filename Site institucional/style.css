@@ -7,7 +7,7 @@
 
 .header {
     position: fixed;
-    background-color: rgba(1, 1, 1, 0.8);
+    background-color: #010101cc;
     width: 100%;
     z-index: 1000;
 }
