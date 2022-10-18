@@ -4,21 +4,18 @@
     border: 0;
     font-family: 'Fredoka', sans-serif;
 }
-
 .header {
     /* position: fixed; */
     background-color: rgba(1, 1, 1, 0.8);
     width: 100%;
     z-index: 1000;
 }
-
 .container {
     /* border: solid 3px blue; */
     display: flex;
     width: 90%;
     margin: auto;
 }
-
 .container .navbar {
     /* border: solid 3px red; */
     width: 90%;
@@ -27,30 +24,22 @@
     align-items: center;
     list-style-type: none;
 }
-
 .navbar li {
     margin-left: 4%;
     font-size: 20px;
     color: white;
 }
-
 li a {
     text-decoration: none;
     color: white;
 }
-
 li a:hover {
     color: #f3ed73;
     transition: 0.5s;
 }
-
 .container #logo {
     width: 10%;
 }
-
-
-
-
 
 /* intro */
 .intro {
@@ -58,51 +47,45 @@ li a:hover {
 }
 
 /* menu */
+.menu, .dashboard{
+    height: 450px;
+}
 .menu {
     /* border: solid red 3px; */
     width: 7%;
-    height: 40vh;
     background-color: #4c4c4c;
     color: white;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.menu_logo {
+    border-radius: 20px 0px 0px 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20%;
-}   
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .menu i {
     font-size: 25px;
     margin: 7%;
 }
-
 .topicos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
-    margin-bottom: 200px;
+    margin-top: 100%;
 }
-
-.topicos p {
+.topicos a {
     margin: 2%;
     font-size: 20px;
 }
-
 .sair {
     color: white;
     background-color: red;
     text-align: center;
-    margin-top: 130%;
     font-size: 18px;
-    padding: 10% 20%;
     border-radius: 20px;
+    margin-bottom: 5%;
+    width: 60px;
+    margin: 5px 5px;
+    align-self: center;
 }
 
 /* dashboard */
@@ -136,7 +119,6 @@ li a:hover {
 .seta{
     width: 20px;
 }
-
 .blocos{
     width: 100%;
     height: 100%;
@@ -166,22 +148,18 @@ footer {
     padding-top: 5%;
     padding-bottom: 5%;
 }
-
 footer .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* border: solid 3px red; */
 }
-
 .social-media {
     text-align: center;
 }
-
 .social-media i {
     padding-top: 10px;
 }
-
 .systoyanka {
     text-align: center;
     font-size: 30px;
