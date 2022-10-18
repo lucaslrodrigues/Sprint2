@@ -47,13 +47,16 @@ li a:hover {
     width: 10%;
 }
 
+
+
+
+
 /* intro */
 .intro {
-    height: 83vh;
     margin-top: 10px;
 }
-/* menu */
 
+/* menu */
 .menu {
     /* border: solid red 3px; */
     width: 20%;
@@ -105,14 +108,17 @@ li a:hover {
 }
 
 
-/* dashboard */
 
+
+
+/* dashboard */
 .dashboard {
     /* border: solid 3px green; */
     width: 80%;
     background-color: #101010dd;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .alerta {
@@ -130,11 +136,16 @@ li a:hover {
     border-radius: 20px;
 }
 
-.alerta section h1 {    
+.alerta section .alerta_texto {    
     /* border: #f3ed73 3px solid; */
+    font-style: normal !important;
     font-size: 40px;
     color: white;
     text-align: center;
+}
+
+.alerta section #porcentagem {
+    font-weight: 900;
 }
 
 .alerta section p {
@@ -149,8 +160,58 @@ li a:hover {
     font-size: 15px;
 }
 
-/* andar */
 
+/* kpi */
+.analystics .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analystics .kpi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 2%; */
+    color: white;
+    margin-top: 2%;
+}
+
+.kpi_critico {
+    background-color: red;
+    padding: 2% 3%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.kpi_emergencia {
+    background-color: yellow;
+    color: black !important;
+    padding: 2% 1%;
+}
+
+.kpi_ideal {
+    background-color: green;
+    padding: 2% 4%;
+} 
+
+.kpi_acimaMedia {
+    background-color: rgb(80, 214, 18);
+    padding: 2% 1%;
+}
+
+.kpi_perfeito {
+    background-color: rgb(43, 43, 219);
+    padding: 2% 2.5%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+
+
+/* andar */
 .andar {
     /* border: solid 3px red; */
     color: white;
@@ -167,10 +228,6 @@ li a:hover {
     width: 50%;
 }
 
-.box h1 {
-    /* text-align: center; */
-}
-
 .box section {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     padding: 6%;
@@ -180,9 +237,31 @@ li a:hover {
     color: white;
 }
 
-.grafico {
+
+
+
+/* footer */
+footer {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     /* border: solid 3px red; */
-    /* margin-top: 1%;
-    margin-bottom: 6%; */
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media i {
+    padding-top: 10px;
+}
+.systoyanka {
+    text-align: center;
+    font-size: 30px;
 }
 

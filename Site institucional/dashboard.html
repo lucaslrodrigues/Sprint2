@@ -60,18 +60,74 @@
             <div class="dashboard">
                 <div class="alerta">
                     <section>
-                        <h1>
-                            Porcentagem de ocupação: <b>50%</b>
-                        </h1>
-
-                        <p id="data">
-
+                        <p class="alerta_texto">
+                            Porcentagem de ocupação: <b id="porcentagem">0%</b>
                         </p>
 
                         <p class="dados">
                             Dados em tempo real
                         </p>
+
+                        <p id="data">
+
+                        </p>
+
                     </section>
+                </div>
+
+
+                <div class="analystics">
+                    <div class="container">
+                        <div class="kpi kpi_critico">
+                            <p>
+                                Crítico
+                            </p>
+
+                            <p class="porcentagem_kpi">
+                                0%
+                            </p>
+                        </div>
+
+                        <div class="kpi kpi_emergencia">
+                            <p>
+                                Emergência
+                            </p>
+
+                            <p class="porcentagem_kpi">
+                                30%
+                            </p>
+                        </div>
+
+                        <div class="kpi kpi_ideal">
+                            <p>
+                                Ideal
+                            </p>
+
+                            <p class="porcentagem_kpi">
+                                50%
+                            </p>
+                        </div>
+
+                        <div class="kpi kpi_acimaMedia">
+                            <p>
+                                Acima da média
+                            </p>
+
+                            <p class="porcentagem_kpi">
+                                70%
+                            </p>
+                        </div>
+
+                        <div class="kpi kpi_perfeito">
+                            <p>
+                                Perfeito
+                            </p>
+
+                            <p class="porcentagem_kpi">
+                                100%
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -107,9 +163,8 @@
     </div>
 
 
-
-    <!-- footer -->
-    <!-- <footer>
+     <!-- footer -->
+     <footer>
         <div class="container">
             <div class="box-footer">
                 <p>
@@ -160,7 +215,8 @@
                 </p>
             </div>
         </div>
-    </footer> -->
+    </footer>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
@@ -222,8 +278,10 @@
 
 <script>
     var now = new Date()
-    document.getElementById('data').innerHTML = `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} às ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
+
+    document.getElementById('data').innerHTML = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} às ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
 </script>
+
 
 
 
