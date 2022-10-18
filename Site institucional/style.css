@@ -182,8 +182,11 @@ li a:hover {
 .box p {
     font-size: 14pt;
     width: 100%;
+    margin: auto;
     text-align: justify;
+    text-indent: 1.5em;
 }
+
 
 .icones {
     width: 10%;

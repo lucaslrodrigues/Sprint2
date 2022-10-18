@@ -123,7 +123,7 @@ li a:hover {
 .alerta section {
     font-weight: 900;
     /* border: 3px solid blue; */
-    width: 50%;
+    width: 65%;
     padding: 1%;
     margin-top: 2%;
     background-color: #4c4c4c;
@@ -132,7 +132,7 @@ li a:hover {
 
 .alerta section h1 {    
     /* border: #f3ed73 3px solid; */
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     text-align: center;
 }
@@ -141,17 +141,48 @@ li a:hover {
     text-align: end;
     font-style: italic;
     color: white;
-    margin-top: 2%;
+    margin-right: 2%;
+    font-size: 15px;
+}
+
+.alerta section .dados {
+    font-size: 15px;
 }
 
 /* andar */
 
 .andar {
-    border: solid 3px red;
+    /* border: solid 3px red; */
+    color: white;
+    margin-top: 3%;
+}
+
+.andar .container {
+    display: flex;
+    flex-direction: column;
 }
 
 .box {
-    border: solid 3px blue;
+    /* border: solid 3px blue; */
     width: 50%;
+}
+
+.box h1 {
+    /* text-align: center; */
+}
+
+.box section {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 6%;
+    border-radius: 20px;
+    margin-top: 3%;
+    background-color: #4c4c4c;
+    color: white;
+}
+
+.grafico {
+    /* border: solid 3px red; */
+    /* margin-top: 1%;
+    margin-bottom: 6%; */
 }
 

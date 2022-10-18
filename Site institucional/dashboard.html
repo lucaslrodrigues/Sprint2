@@ -63,7 +63,12 @@
                         <h1>
                             Porcentagem de ocupação: <b>50%</b>
                         </h1>
-                        <p>
+
+                        <p id="data">
+
+                        </p>
+
+                        <p class="dados">
                             Dados em tempo real
                         </p>
                     </section>
@@ -71,26 +76,28 @@
 
 
                 <div class="andar">
-                    <h1>
-                        Andares com baixa ocupação!
-                    </h1>
-                    <div class="box">
-                        <section>
-                            <h1>1º Andar</h1>
+                    <div class="container">
+                        <h1>
+                            Andares com baixa ocupação!
+                        </h1>
+                        <div class="box">
+                            <section>
+                                <h1>1º Andar</h1>
+    
+                                <div class="grafico">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </section>
+    
+                            <section>
+                                <h1>2º Andar</h1>
+    
+                                <div class="grafico">
+                                    <canvas id="myChart2"></canvas>
+                                </div>
 
-                            <div>
-                                <canvas id="myChart"></canvas>
-                            </div>
-                        </section>
-
-                        <section>
-                            <h1>2º Andar</h1>
-
-                            <div>
-                                <canvas id="myChart2"></canvas>
-                            </div>
-
-                        </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
 
@@ -98,18 +105,6 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -181,7 +176,7 @@
     const data = {
         labels: labels,
         datasets: [{
-            label: 'My First dataset',
+            label: 'Horas',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: [0, 10, 5, 2, 20, 30, 45],
@@ -192,7 +187,7 @@
     const data2 = {
         labels: labels,
         datasets: [{
-            label: 'My First dataset',
+            label: 'Horas',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: [0, 5, 3, 25, 40, 20, 35],
@@ -223,6 +218,11 @@
         document.getElementById('myChart2'),
         config2
     );
+</script>
+
+<script>
+    var now = new Date()
+    document.getElementById('data').innerHTML = `${now.getDate()}/${now.getMonth()}/${now.getFullYear()} às ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
 </script>
 
 
