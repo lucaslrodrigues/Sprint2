@@ -59,7 +59,7 @@ li a:hover {
 /* menu */
 .menu {
     /* border: solid red 3px; */
-    width: 20%;
+    width: 7%;
     height: 83vh;
     background-color: #4c4c4c;
     color: white;
@@ -69,19 +69,15 @@ li a:hover {
 
 .menu_logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 7%;
-}
+    margin-top: 20%;
+}   
 
-.menu img {
-    /* border: solid 2px gray; */
-    width: 30%;
-    padding: 10px;
-    height: auto;
-    background-color: #101010dd;
-    border-radius: 100% 100%;
+.menu i {
+    font-size: 25px;
+    margin: 7%;
 }
 
 .topicos {
@@ -89,21 +85,22 @@ li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
+    margin-top: 150px;
+    margin-bottom: 200px;
 }
 
 .topicos p {
     margin: 2%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .sair {
     color: white;
     background-color: red;
     text-align: center;
-    margin-top: 60%;
-    font-size: 25px;
-    padding: 2% 20%;
+    margin-top: 180px;
+    font-size: 18px;
+    padding: 10% 20%;
     border-radius: 20px;
 }
 
@@ -114,7 +111,7 @@ li a:hover {
 /* dashboard */
 .dashboard {
     /* border: solid 3px green; */
-    width: 80%;
+    width: 100%;
     background-color: #101010dd;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -136,7 +133,7 @@ li a:hover {
     border-radius: 20px;
 }
 
-.alerta section .alerta_texto {    
+.alerta section .alerta_texto {
     /* border: #f3ed73 3px solid; */
     font-style: normal !important;
     font-size: 40px;
@@ -157,7 +154,7 @@ li a:hover {
 }
 
 .alerta section .dados {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 
@@ -180,7 +177,7 @@ li a:hover {
 
 .kpi_critico {
     background-color: red;
-    padding: 2% 3%;
+    padding: 0.5% 4%;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -188,24 +185,28 @@ li a:hover {
 .kpi_emergencia {
     background-color: yellow;
     color: black !important;
-    padding: 2% 1%;
+    padding: 0.5% 2%;
 }
 
 .kpi_ideal {
     background-color: green;
-    padding: 2% 4%;
-} 
+    padding: 0.5% 4%;
+}
 
 .kpi_acimaMedia {
     background-color: rgb(80, 214, 18);
-    padding: 2% 1%;
+    padding: 0.5% 1%;
 }
 
 .kpi_perfeito {
     background-color: rgb(43, 43, 219);
-    padding: 2% 2.5%;
+    padding: 0.5% 3.5%;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.porcentagem_kpi {
+    font-size: 25px;
 }
 
 
@@ -213,19 +214,24 @@ li a:hover {
 
 /* andar */
 .andar {
-    /* border: solid 3px red; */
     color: white;
-    margin-top: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
 }
 
 .andar .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;  
+    width: 100%;
+    justify-content: space-around;  
+    /* border: solid 3px yellow; */
 }
+
 
 .box {
     /* border: solid 3px blue; */
-    width: 50%;
+    width: 100%;
 }
 
 .box section {
@@ -235,7 +241,9 @@ li a:hover {
     margin-top: 3%;
     background-color: #4c4c4c;
     color: white;
+    /* border: solid 3px white; */
 }
+
 
 
 
@@ -260,8 +268,8 @@ footer .container {
 .social-media i {
     padding-top: 10px;
 }
+
 .systoyanka {
     text-align: center;
     font-size: 30px;
 }
-
