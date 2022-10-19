@@ -34,7 +34,7 @@
                     <a style="color: white;" href="dashboard2.html"><i class="fa-solid fa-chart-simple"></i></a>
                     <!-- <i class="fa-solid fa-gear"></i> -->
                 </div>
-                <button class="sair"> Sair </button>
+                <button class="sair" onclick="exit()"> Sair </button>
             </div>
             <div class="dashboard">                
                 <div class="andar">
@@ -239,5 +239,8 @@
         }else{
             esconder3.style.display = "none";
         }
+    }
+    function exit(){
+        window.location.href = "index.html";
     }
 </script>
