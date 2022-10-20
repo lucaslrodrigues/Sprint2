@@ -50,8 +50,6 @@ li a:hover {
 
 
 
-
-
 /* intro */
 .intro {
     margin-top: 10px;
@@ -61,6 +59,7 @@ li a:hover {
 .menu {
     /* border: solid red 3px; */
     width: 7%;
+    height: 40vh;
     background-color: #4c4c4c;
     color: white;
     border-radius: 20px 0px 0px 20px;
@@ -88,22 +87,25 @@ li a:hover {
     margin-bottom: 200px;
 }
 
-.topicos p {
-    margin: 2%;
+.topicos p {    
     font-size: 20px;
 }
+
+.topicos a {
+    font-size: 20px;
+    margin-top: 15%;
+}
+
 
 .sair {
     color: white;
     background-color: red;
     text-align: center;
-    margin-top: 130%;
+    margin-top: 90%;
     font-size: 18px;
     padding: 10% 20%;
     border-radius: 20px;
 }
-
-
 
 
 
@@ -112,7 +114,9 @@ li a:hover {
     /* border: solid 3px green; */
     width: 100%;
     background-color: #101010dd;
-    border-radius: 0px 20px 20px 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .alerta {
@@ -239,10 +243,11 @@ li a:hover {
     background-color: #4c4c4c;
     color: white;
     /* border: solid 3px white; */
+} 
+
+canvas {
+   color: white; 
 }
-
-
-
 
 
 /* footer */

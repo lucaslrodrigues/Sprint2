@@ -23,7 +23,7 @@
             <img id="logo" src="images/logo-nav.png" alt="">
 
             <div class="navbar">
-                <li> Olá, Cliente! <a href="">  <i class="fa-solid fa-user"> </i></a> </li>
+                <li> Olá, Cliente! <a href=""> <i class="fa-solid fa-user"> </i></a> </li>
             </div>
         </div>
     </div>
@@ -39,11 +39,12 @@
                 </div> -->
 
                 <div class="topicos">
-                    <a style="color: white;" href="dashboard.html"><i class="fa-solid fa-bars"></i></a>
+                    
+                    <a style="color: white;" href="dashboard.html"><i class="fa-solid fa-house"></i></a>
 
-                    <a style="color: white;" href="dashboard2.html"><i class="fa-solid fa-chart-simple"></i></a>
+                    <a style="color: white;" href="dashboard2.html"><i class="fa-solid fa-bars"></i></a>
 
-                    <i class="fa-solid fa-gear"></i>
+                    <a style="color: white;" href=""><i class="fa-solid fa-gear"></i></a>
 
                     <button class="sair" onclick="exit()"> Sair </button>
                 </div>
@@ -93,7 +94,7 @@
                             </p>
 
                             <p class="porcentagem_kpi">
-                                50%
+                                65%
                             </p>
                         </div>
 
@@ -103,7 +104,7 @@
                             </p>
 
                             <p class="porcentagem_kpi">
-                                70%
+                                80%
                             </p>
                         </div>
 
@@ -122,36 +123,58 @@
 
                 <div class="andar">
                     <div class="container">
-                        <div>
+                        <div class="chart">
                             <h1>
-                                Andares com baixa ocupação!
+                                Blocos com baixa ocupação!
                             </h1>
                             <div class="box">
                                 <section>
-                                    <h1>1º Andar</h1>
-    
+                                    <h1>1º Andar - Bloco B</h1>
+
                                     <div class="grafico">
                                         <canvas id="myChart"></canvas>
                                     </div>
                                 </section>
-    
+
                                 <section>
-                                    <h1>2º Andar</h1>
-    
+                                    <h1>3º Andar - Bloco D</h1>
+
                                     <div class="grafico">
                                         <canvas id="myChart2"></canvas>
                                     </div>
-    
+
                                 </section>
                             </div>
                         </div>
 
-                        <div>
+                        <div class="chart">
                             <h1>
-                                Exemplo SUHAUHSAUHS
+                                
                             </h1>
+                            <div class="box">
+                                <section>
+                                    <p>
+                                        <li>
+                                            Há uma <b>baixa de 35%</b> na ocupação do estacionamento às <b>quintas-feiras.</b>
+                                        </li>
+                                    </p>
+                                </section>
+
+                                <section>
+                                    <li>
+                                        Aos finais de semana, os índices de ocupação chegam a <b>85%.</b> 
+                                    </li>
+                                </section>
+
+
+                                <section>
+                                    <li>
+                                        No último mês, o 2° andar foi o <b>mais utilizado</b> entre os andares.
+                                    </li>
+                                </section>
+                            </div>
                         </div>
-                        
+
                     </div>
                 </div>
 
@@ -218,23 +241,24 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    const labels = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
+    const labels = [    
     ];
 
     const data = {
-        labels: labels,
+        labels: labels, 
         datasets: [{
             label: 'Horas',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45],
-        }]
+            data: [1],   
+        },
+        {
+            label: 'Horas',
+            backgroundColor: 'rgb(255, 0, 0 )',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [2],   
+        }
+    ]
 
     };
 
@@ -244,13 +268,12 @@
             label: 'Horas',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 5, 3, 25, 40, 20, 35],
+            data: [0, 2, 1, 0, 1],
         }]
-
     };
 
     const config = {
-        type: 'line',
+        type: 'doughnut',
         data: data,
         options: {}
     };
@@ -281,7 +304,7 @@
 </script>
 <!-- Botão -->
 <script>
-    function exit(){
+    function exit() {
         window.location.href = "index.html";
     }
 </script>
