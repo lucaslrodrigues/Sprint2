@@ -36,7 +36,8 @@ create table Usuario (
 idUsuario int,
 Login varchar(45),
 Senha varchar(45),
-Tipo varchar(45),
+Tipo varchar(45), constraint chkTipo 
+	check (tipo in ('Admin','user')),
  fkShopping int,constraint foreign key fkShopping (fkShopping) references Shopping (idshopping),
  primary key (idUsuario, fkShopping)
 );
@@ -96,11 +97,14 @@ insert into leitura (Dt_hora, Retorno, fksensor) values
 ('2022-10-05-17:10:00',1, 4),
 ('2022-10-30-16:15:00',1, 5);
 
+insert into usuario values
+(1, 'Brandão@sptech', 'sptech', 'Admin', 3),
+(2, 'Caramico@sptech', '12345', 'Admin', 1),
+(3, 'Victor@sptech', '40674545', 'user', 2);
+
 select * from endereço;
 
 select * from shopping;
-
-select * from vagas;
 
 select * from sensor;
 
@@ -109,13 +113,25 @@ select * from leitura;
 SELECT SUM(Retorno) FROM leitura;
 
 SELECT * FROM shopping JOIN endereço 
-	ON idShopping = fkShopping;
+	ON idShopping = fkShoppingE;
     
-SELECT * FROM shopping JOIN vagas 
-	ON idShopping = fkShopping;
+SELECT * FROM shopping JOIN sensor 
+	ON idShopping = fkShoppingS;
 
-SELECT * FROM vagas JOIN sensor 
-	ON idVagas = fkvaga;
+SELECT * FROM sensor JOIN leitura 
+	ON idSensor = fkSensor;
     
 SELECT * FROM sensor JOIN leitura 
 	ON idSensor = fksensor;
+    
+SELECT * FROM shopping JOIN endereço 
+	ON idShopping = fkShoppingE
+    join sensor on idShopping = fkShoppingS
+    join usuario on idShopping = fkShopping;
+    
+    SELECT * FROM shopping JOIN endereço 
+	ON idShopping = fkShoppingE
+    join sensor on idShopping = fkShoppingS
+    join usuario on idShopping = fkShopping
+    where cidade like 'D%';
+    
