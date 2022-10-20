@@ -41,44 +41,53 @@ Tipo varchar(45),
  primary key (idUsuario, fkShopping)
 );
 
-insert into Shopping (Nome, CNPJ, Telefone, Login, senha) values
- ('Shopping Praça da moça', '52678945301254', '1185461247', 'shoppdm@gmail.com','pdm123'),
- ('Shopping Park São Caetano', '44566788901241', '1178451204', 'shoppsc@gmail.com','psc784'),
- ('Shopping Paulista', '14547856412457', '1154124680', 'shopp@gmail.com','sp3105'),
- ('Shopping Rio sul', '78451204578451', '2154687124', 'shoprs@gmail.com','rs178'),
- ('Shopping Centerminas', '87541245879645', '3178446124', 'shopc@gmail.com','c78456');
+insert into Shopping (Nome, CNPJ, Telefone) values
+ ('Shopping Praça da moça', '52678945301254', '1185461247'),
+ ('Shopping Aricanduva', '24355214544132', '1140674545'),
+ ('Shopping JK Iguatemi', '64589092093425', '1140664066');
 
-insert into Endereço (cidade, estado, Bairro, CEP, fkshopping) values
- ( 'Diadema', 'São Paulo', 'Praça da moça','09910-720', 1),
-('São Caetano', 'São Paulo', 'Cerâmica','85412-120', 2),
-('São Paulo','São Paulo', 'Bela Vista','78451-202', 3),
-('Rio de Janeiro','Rio de Janeiro','Botafogo','98461-451', 4),
-('Belo Horizonte', 'Minas Gerais', 'União', '31170-678', 5);
+insert into Endereço (cidade, Bairro, CEP, fkshoppingE) values
+ ( 'Diadema', 'Praça Da Moça','09910-720', 1),
+('São Paulo', 'aricanduva','03527-900', 2),
+('São Paulo', 'Vila Olímpia','04543-011', 3);
 
-insert into Vagas (Andar, Bloco, fkshopping) values
+insert into sensor (Andar, Bloco, fkshoppingS) values
 (01,'A',1),
-(02,'B',1),
-(03,'C',1),
-(02,'B',2),
 (01,'A',2),
-(02,'B',2),
-(03,'C',2),
-(02,'B',3),
-(03,'C',3),
 (01,'A',3),
-(01,'A',4),
-(02,'B',4),
-(03,'C',4),
-(01,'A',5),
-(02,'B',5),
-(03,'C',5);
-
-insert into sensor (Nome, fkvaga) values
-('shop praça da moça', 1),
-('shop Park São Caetano', 2),
-('shop Paulista', 3),
-('shop Rio sul', 4),
-('shop Centerminas', 5);
+(01,'B',1),
+(01,'B',2),
+(01,'B',3),
+(01,'C',1),
+(01,'C',2),
+(01,'C',3),
+(01,'D',1),
+(01,'D',2),
+(01,'D',3),
+(02,'A',1),
+(02,'A',2),
+(02,'A',3),
+(02,'B',1),
+(02,'B',2),
+(02,'B',3),
+(02,'C',1),
+(02,'C',2),
+(02,'C',3),
+(02,'D',1),
+(02,'D',2),
+(02,'D',3),
+(03,'A',1),
+(03,'A',2),
+(03,'A',3),
+(03,'B',1),
+(03,'B',2),
+(03,'B',3),
+(03,'C',1),
+(03,'C',2),
+(03,'C',3),
+(03,'D',1),
+(03,'D',2),
+(03,'D',3);
 
 insert into leitura (Dt_hora, Retorno, fksensor) values
 ('2022-10-23-19:50:00', 1, 1),
