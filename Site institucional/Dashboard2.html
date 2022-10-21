@@ -58,28 +58,28 @@
                                     <div class="boxes_blocos">
                                         <span>Bloco A</span>
                                         <div class="box_bloco">
-                                            <span>Ocupação do bloco: <label id="percent1"><b>7%</b></label></span>
+                                            <span>Ocupação do bloco: <label id="percent2"><b>7%</b></label></span>
                                             <img class="seta" src="images/seta vermelha.png">
                                         </div>
                                     </div>
                                     <div class="boxes_blocos">
                                         <span>Bloco B</span>
                                         <div class="box_bloco">
-                                            <span>Ocupação do bloco: <label id="percent1"><b>22%</b></label></span>
+                                            <span>Ocupação do bloco: <label id="percent3"><b>22%</b></label></span>
                                             <img class="seta" src="images/seta vermelha.png">
                                         </div>
                                     </div>
                                     <div class="boxes_blocos">
                                         <span>Bloco C</span>
                                         <div class="box_bloco">
-                                            <span>Ocupação do bloco: <label id="percent1"><b>49%</b></label></span>
+                                            <span>Ocupação do bloco: <label id="percent4"><b>49%</b></label></span>
                                             <img class="seta" src="images/seta verde.png">
                                         </div>
                                     </div>
                                     <div class="boxes_blocos">
                                         <span>Bloco D</span>
                                         <div class="box_bloco">
-                                            <span>Ocupação do bloco: <label id="percent1"><b>68%</b></label></span>
+                                            <span>Ocupação do bloco: <label id="percent5"><b>68%</b></label></span>
                                             <img class="seta" src="images/seta verde.png">
                                         </div>
                                     </div>
@@ -170,6 +170,48 @@
                                 </div>
                             </div>
 
+                            <a onclick="mostrar4()">
+                                <div class="box_andar">
+                                    <span>Andar 4</span>
+                                    <div class="box_andar_info">
+                                        <span>Ocupação do andar: <label id="percent4"><b>89%</b></label></span>
+                                        <img class="seta" src="images/seta verde.png">
+                                    </div>
+                                </div></a>
+    
+                                <div id="esconder4" style="display: none;">
+                                    <div class="blocos">
+                                        <div class="boxes_blocos">
+                                            <span>Bloco A</span>
+                                            <div class="box_bloco">
+                                                <span>Ocupação do bloco: <label id="percent1"><b>67%</b></label></span>
+                                                <img class="seta" src="images/seta verde.png">
+                                            </div>
+                                        </div>
+                                        <div class="boxes_blocos">
+                                            <span>Bloco B</span>
+                                            <div class="box_bloco">
+                                                <span>Ocupação do bloco: <label id="percent1"><b>68%</b></label></span>
+                                                <img class="seta" src="images/seta verde.png">
+                                            </div>
+                                        </div>
+                                        <div class="boxes_blocos">
+                                            <span>Bloco C</span>
+                                            <div class="box_bloco">
+                                                <span>Ocupação do bloco: <label id="percent1"><b>70%</b></label></span>
+                                                <img class="seta" src="images/seta verde.png">
+                                            </div>
+                                        </div>
+                                        <div class="boxes_blocos">
+                                            <span>Bloco D</span>
+                                            <div class="box_bloco">
+                                                <span>Ocupação do bloco: <label id="percent1"><b>100%</b></label></span>
+                                                <img class="seta" src="images/seta verde.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                         </div>
                     </div>
                 </div>
@@ -207,15 +249,18 @@
     var cont1 = 1;
     var cont2 = 1;
     var cont3 = 1;
+    var cont4 = 1;
 
     function mostrar1(){
         esconder2.style.display = "none";
         esconder3.style.display = "none";
+        esconder4.style.display = "none";
         cont1 ++
         if(cont1 %2 == 0){
             esconder1.style.display = "block";
             cont2 = 1;
             cont3 = 1;
+            cont4 = 1;
         }else{
             esconder1.style.display = "none";
         }
@@ -223,11 +268,13 @@
     function mostrar2(){
         esconder1.style.display = "none";
         esconder3.style.display = "none";
+        esconder4.style.display = "none";
         cont2 ++
         if(cont2 %2 == 0){
             esconder2.style.display = "block";
             cont1 = 1;
             cont3 = 1;
+            cont4 = 1;
         }else{
             esconder2.style.display = "none";
         }
@@ -235,13 +282,29 @@
     function mostrar3(){
         esconder1.style.display = "none";
         esconder2.style.display = "none";
+        esconder4.style.display = "none";
         cont3 ++
         if(cont3 %2 == 0){
             esconder3.style.display = "block";
             cont1 = 1;
-            cont2 = 1; 
+            cont2 = 1;
+            cont4 = 1;
         }else{
             esconder3.style.display = "none";
+        }
+    }
+    function mostrar4(){
+        esconder1.style.display = "none";
+        esconder2.style.display = "none";
+        esconder3.style.display = "none";
+        cont4 ++
+        if(cont4 %2 == 0){
+            esconder4.style.display = "block";
+            cont1 = 1;
+            cont2 = 1;
+            cont3 = 1;
+        }else{
+            esconder4.style.display = "none";
         }
     }
     function exit(){
