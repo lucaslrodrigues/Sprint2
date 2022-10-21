@@ -1,4 +1,13 @@
-use sprint2;
+create database systoyanka;
+use systoyanka;
+
+create table Shopping (
+idshopping int primary key auto_increment,
+Nome varchar(45),
+CNPJ char(14) unique,
+Telefone char (10)
+);
+
 
 Create table Endereço (
 idEndereço int primary key auto_increment,
@@ -10,36 +19,29 @@ CEP varchar (9),
 );
 
 
-create table Shopping (
-idshopping int primary key auto_increment,
-Nome varchar(45),
-CNPJ char(14) unique,
-Telefone char (10)
-);
-
 create table Sensor (
 idSensor int primary key auto_increment,
 Andar char(2),
 Bloco varchar (4),
- fkShoppingS int,constraint foreign key fkshoppingS (fkshoppingS) references Shopping (idshopping)
+fkShoppingS int,constraint foreign key fkshoppingS (fkshoppingS) references Shopping (idshopping)
 );
 
 create table Leitura(
-idResposta int,
+idResposta int auto_increment,
 Dt_hora DATETIME, 
 Retorno int,
- fkSensor int,constraint foreign key fkSensor (fkSensor) references Sensor (idSensor),
- primary key (idResposta, fkSensor)
+fkSensor int,constraint foreign key fkSensor (fkSensor) references Sensor (idSensor),
+primary key (idResposta, fkSensor)
 );
 
 create table Usuario (
-idUsuario int,
+idUsuario int auto_increment,
 Login varchar(45),
 Senha varchar(45),
 Tipo varchar(45), constraint chkTipo 
-	check (tipo in ('Admin','user')),
- fkShopping int,constraint foreign key fkShopping (fkShopping) references Shopping (idshopping),
- primary key (idUsuario, fkShopping)
+check (tipo in ('Admin','user')),
+fkShopping int,constraint foreign key fkShopping (fkShopping) references Shopping (idshopping),
+primary key (idUsuario, fkShopping)
 );
 
 insert into Shopping (Nome, CNPJ, Telefone) values
@@ -91,11 +93,11 @@ insert into sensor (Andar, Bloco, fkshoppingS) values
 (03,'D',3);
 
 insert into leitura (Dt_hora, Retorno, fksensor) values
-('2022-10-23-19:50:00', 1, 1),
-('2022-10-22-18:43:00',1, 2),
-('2022-10-20-14:15:00',0, 3),
-('2022-10-05-17:10:00',1, 4),
-('2022-10-30-16:15:00',1, 5);
+('2022-10-23 19:50:00', 1, 1),
+('2022-10-22 18:43:00', 1, 2),
+('2022-10-20 14:15:00', 0, 3),
+('2022-10-05 17:10:00', 1, 4),
+('2022-10-30 16:15:00', 1, 5);
 
 insert into usuario values
 (1, 'Brandão@sptech', 'sptech', 'Admin', 3),
@@ -134,4 +136,5 @@ SELECT * FROM shopping JOIN endereço
     join sensor on idShopping = fkShoppingS
     join usuario on idShopping = fkShopping
     where cidade like 'D%';
+    
     
