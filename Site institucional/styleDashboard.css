@@ -218,6 +218,7 @@ li a:hover {
 .chart {
     /* border: solid 3px red; */
     height: 105vh;
+    margin-top: 2%;
 }
 
 .chart .container {
@@ -225,7 +226,7 @@ li a:hover {
     width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
@@ -233,11 +234,21 @@ li a:hover {
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    font-size: 14px;
     color: white;
+    /* border: 2px solid white; */
+    width: 50%;
 }
 
-.ladoA section {
+.grafico_doughnuts {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 20px;
+    background-color: #4c4c4c;
+    display: flex;
+    justify-content: center;
+    padding: 2% 0%;
+}
+
+.etiquetas {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 20px;
     background-color: #4c4c4c;
@@ -247,11 +258,16 @@ li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3%;
 }
 
 .ladoA h1 {
     margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid green; */
+    font-size: 21px;
 }
 
 .ladoB {
@@ -260,11 +276,12 @@ li a:hover {
     align-items: center;
     margin-top: 2%;
     color: white;
-    font-size: 14px;
+    /* border: solid 3px red; */
 }
 
 .ladoB h1 {
     margin-bottom: 2%;
+    font-size: 22px;
 }
 
 .ladoB section {
@@ -274,6 +291,7 @@ li a:hover {
     color: white;
     /* border: 3px solid green; */
     margin-bottom: 5%;
+    padding: 3%;
 }
 
 /* .box {

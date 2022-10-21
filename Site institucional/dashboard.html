@@ -124,7 +124,10 @@
 
                         <div class="ladoA">
                             <h1>
-                                Porcentagem de ocupação do shopping
+                                Porcentagem de ocupação por 
+                            </h1>
+                            <h1>
+                                andar em tempo real
                             </h1>
                             <section class="grafico_doughnuts">
                                 <div style="width: 50vh;">
@@ -133,7 +136,7 @@
                             </section>
 
                             <div class="box">
-                                <section>
+                                <section class="etiquetas">
                                     <p>
                                         <li>
                                             Há uma <b>baixa de 35%</b> na ocupação do estacionamento às
@@ -142,14 +145,14 @@
                                     </p>
                                 </section>
 
-                                <section>
+                                <section class="etiquetas">
                                     <li>
                                         Aos finais de semana, os índices de ocupação chegam a <b>85%.</b>
                                     </li>
                                 </section>
 
 
-                                <section>
+                                <section class="etiquetas">
                                     <li>
                                         No último mês, o 2° andar foi o <b>mais utilizado</b> entre os andares.
                                     </li>
@@ -161,7 +164,10 @@
 
                         <div class="ladoB">
                             <h1>
-                                Dsahusauhdjhas
+                                Picos mais altos de ocupação 
+                            </h1>
+                            <h1>
+                                durante os dias da semana
                             </h1>
                             <section>
                                 <div style="width: 70vh;">
@@ -174,12 +180,8 @@
                                     <canvas style="width: 70vh;" id="myChart3"></canvas>
                                 </div>
                             </section>
-
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -257,27 +259,43 @@
             '4° Andar',
         ],
         datasets: [{
-            label: 'My First Dataset',
-            data: [20, 50, 70, 100],
+            label: 'Porcentagem',
+            data: [28, 59, 78, 89],
+            backgroundColor: 'rgb(255, 99, 132)',
             backgroundColor: [
                 'rgb(255, 0, 0)',
-                'rgb(0, 255, 255)',
-                'rgb(0, 0, 255)',
-                'rgb(255, 0, 255)'
+                'rgb(255, 255, 0)',
+                'rgb(0, 128, 0)',
+                'rgb(80, 214, 18)',
             ],
+            borderColor: 'rgb(255, 99, 132)', 
             hoverOffset: 4
         }]
     };
 
     const config = {
-        type: 'doughnut',
+        type: 'bar',
         data: data,
+        options: {
+            scales: {
+                y: {
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#fff'
+                    }
+                }
+            }
+        }
     };
 </script>
 
 
 <script>
-    const myChart3 = new Chart(
+    const myChart = new Chart(
         document.getElementById('myChart'),
         config
     );
@@ -288,19 +306,22 @@
 <!-- Graficos lado B -->
 <script>
     const labels = [
-        '1° Andar',
-        '2° Andar',
-        '3° Andar',
-        '4° Andar',
+        'Domingo',
+        'Segunda-feira',
+        'Terça-feira',
+        'Quarta-feira',
+        'Quinta-feira',
+        'Sexta-feira',
+        'Sábado',
     ];
 
     const data2 = {
         labels: labels,
         datasets: [{
-            label: 'Horas',
+            label: 'Porcentagem',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 2, 1, 0, 1],
+            data: [85, 60, 50, 29.75, 60, 30],
         }]
     };
 
@@ -319,23 +340,55 @@
     const config2 = {
         type: 'line',
         data: data2,
-        options: {}
+        options: {
+            plugins: {
+                legend: {
+                    color: 'rgb(255, 255, 255)'
+                }
+            },
+            scales: {
+                y: {
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+            }
+        }
+
     };
 
     const config3 = {
         type: 'line',
         data: data3,
-        options: {}
+        options: {
+            scales: {
+                y: {
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: '#fff'
+                    }
+                }
+            }
+        }
     };
 </script>
 
 <script>
-    const myChart = new Chart(
+    const myChart2 = new Chart(
         document.getElementById('myChart2'),
         config2
     );
 
-    const myChart2 = new Chart(
+    const myChart3 = new Chart(
         document.getElementById('myChart3'),
         config3
     );
