@@ -23,7 +23,7 @@
             <img id="logo" src="images/logo-nav.png" alt="">
 
             <div class="navbar">
-                <li> Olá, Cliente! <a href=""> <i class="fa-solid fa-user"> </i></a> </li>
+                <li> Olá, Aricanduva! <a href=""> <i class="fa-solid fa-user"> </i></a> </li>
             </div>
         </div>
     </div>
@@ -175,6 +175,10 @@
                                 </div>
                             </section>
 
+                            <h1>
+                                Porcentagem de ocupação mensal
+                            </h1>
+
                             <section>
                                 <div>
                                     <canvas style="width: 70vh;" id="myChart3"></canvas>
@@ -313,6 +317,13 @@
         'Quinta-feira',
         'Sexta-feira',
         'Sábado',
+    ]
+
+    const labels2 = [
+        'Julho',
+        'Agosto',
+        'Setembro',
+        'Outubro',
     ];
 
     const data2 = {
@@ -328,12 +339,12 @@
 
 
     const data3 = {
-        labels: labels,
+        labels: labels2,
         datasets: [{
-            label: 'Horas',
+            label: 'Porcentagem',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 2, 1, 0, 1],
+            data: [90, 70, 75, 82, 60, 100],  
         }]
     };
 
