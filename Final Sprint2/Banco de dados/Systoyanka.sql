@@ -29,7 +29,7 @@ fkShoppingS int,constraint foreign key fkshoppingS (fkshoppingS) references Shop
 create table Leitura(
 idResposta int auto_increment,
 Dt_hora DATETIME, 
-Retorno int,
+statusRetorno int,
 fkSensor int,constraint foreign key fkSensor (fkSensor) references Sensor (idSensor),
 primary key (idResposta, fkSensor)
 );
@@ -112,6 +112,8 @@ select * from sensor;
 
 select * from leitura;
 
+select * from usuario;
+
 SELECT SUM(Retorno) FROM leitura;
 
 SELECT * FROM shopping JOIN endereço 
@@ -136,5 +138,7 @@ SELECT * FROM shopping JOIN endereço
     join sensor on idShopping = fkShoppingS
     join usuario on idShopping = fkShopping
     where cidade like 'D%';
+    
+    
     
     
