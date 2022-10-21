@@ -71,7 +71,7 @@ li a:hover {
     justify-content: center;
     align-items: center;
     margin-top: 20%;
-}   
+}
 
 .menu i {
     font-size: 25px;
@@ -87,7 +87,7 @@ li a:hover {
     margin-bottom: 200px;
 }
 
-.topicos p {    
+.topicos p {
     font-size: 20px;
 }
 
@@ -213,22 +213,79 @@ li a:hover {
 
 
 
-/* andar */
-.andar {
-    color: white;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 100%;
+/* graficos */
+
+.chart {
+    /* border: solid 3px red; */
+    height: 105vh;
 }
 
-.andar .container {
+.chart .container {
+    /* border: solid 3px blue; */
+    width: 90%;
     display: flex;
-    flex-direction: row;  
-    width: 100%;
-    justify-content: space-around;  
-    /* border: solid 3px yellow; */
+    flex-direction: row;
+    justify-content: space-around;
 }
 
+
+.ladoA {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    font-size: 14px;
+    color: white;
+}
+
+.ladoA section {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 20px;
+    background-color: #4c4c4c;
+    color: white;
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+}
+
+.ladoA h1 {
+    margin-bottom: 2%;
+}
+
+.ladoB {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    color: white;
+    font-size: 14px;
+}
+
+.ladoB h1 {
+    margin-bottom: 2%;
+}
+
+.ladoB section {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 20px;
+    background-color: #4c4c4c;
+    color: white;
+    /* border: 3px solid green; */
+    margin-bottom: 5%;
+}
+
+/* .box {
+     border: solid 3px white; 
+    margin-top: 3%;
+}
+
+.box section {
+    margin-top: 3%;
+    padding: 1% 2%;
+    font-size: 16px;
+} */
 
 .box {
     /* border: solid 3px blue; */
@@ -237,7 +294,7 @@ li a:hover {
 
 .box section {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    padding: 6%;
+    padding: 3%;
     border-radius: 20px;
     margin-top: 3%;
     background-color: #4c4c4c;
@@ -245,9 +302,7 @@ li a:hover {
     /* border: solid 3px white; */
 } 
 
-canvas {
-   color: white; 
-}
+
 
 
 /* footer */

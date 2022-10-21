@@ -32,14 +32,9 @@
     <div class="intro">
         <div class="container">
             <div class="menu">
-                <!-- <div class="menu_logo">
-                    
-                        <i class="fa-solid fa-user"></i>
-
-                </div> -->
 
                 <div class="topicos">
-                    
+
                     <a style="color: white;" href="dashboard.html"><i class="fa-solid fa-house"></i></a>
 
                     <a style="color: white;" href="dashboard2.html"><i class="fa-solid fa-bars"></i></a>
@@ -51,6 +46,7 @@
 
             </div>
 
+            <!-- alerta -->
             <div class="dashboard">
                 <div class="alerta">
                     <section>
@@ -65,7 +61,7 @@
                     </section>
                 </div>
 
-
+                <!-- analystics -->
                 <div class="analystics">
                     <div class="container">
                         <div class="kpi kpi_critico">
@@ -121,48 +117,34 @@
                 </div>
 
 
-                <div class="andar">
+
+                <!-- grafico doughnuts -->
+                <div class="chart">
                     <div class="container">
-                        <div class="chart">
+
+                        <div class="ladoA">
                             <h1>
-                                Blocos com baixa ocupação!
+                                Porcentagem de ocupação do shopping
                             </h1>
-                            <div class="box">
-                                <section>
-                                    <h1>1º Andar - Bloco B</h1>
+                            <section class="grafico_doughnuts">
+                                <div style="width: 50vh;">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </section>
 
-                                    <div class="grafico">
-                                        <canvas id="myChart"></canvas>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <h1>3º Andar - Bloco D</h1>
-
-                                    <div class="grafico">
-                                        <canvas id="myChart2"></canvas>
-                                    </div>
-
-                                </section>
-                            </div>
-                        </div>
-
-                        <div class="chart">
-                            <h1>
-                                
-                            </h1>
                             <div class="box">
                                 <section>
                                     <p>
                                         <li>
-                                            Há uma <b>baixa de 35%</b> na ocupação do estacionamento às <b>quintas-feiras.</b>
+                                            Há uma <b>baixa de 35%</b> na ocupação do estacionamento às
+                                            <b>quartas-feiras.</b>
                                         </li>
                                     </p>
                                 </section>
 
                                 <section>
                                     <li>
-                                        Aos finais de semana, os índices de ocupação chegam a <b>85%.</b> 
+                                        Aos finais de semana, os índices de ocupação chegam a <b>85%.</b>
                                     </li>
                                 </section>
 
@@ -175,12 +157,34 @@
                             </div>
                         </div>
 
+
+
+                        <div class="ladoB">
+                            <h1>
+                                Dsahusauhdjhas
+                            </h1>
+                            <section>
+                                <div style="width: 70vh;">
+                                    <canvas id="myChart2"></canvas>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div>
+                                    <canvas style="width: 70vh;" id="myChart3"></canvas>
+                                </div>
+                            </section>
+
+
+
+                        </div>
                     </div>
+
                 </div>
-
             </div>
-        </div>
 
+        </div>
+    </div>
     </div>
 
 
@@ -238,29 +242,57 @@
         </div>
     </footer>
 
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<!-- Graficos Doughnut lado B -->
 <script>
-    const labels = [    
-    ];
-
     const data = {
-        labels: labels, 
+        labels: [
+            '1° Andar',
+            '2° Andar',
+            '3° Andar',
+            '4° Andar',
+        ],
         datasets: [{
-            label: 'Horas',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [1],   
-        },
-        {
-            label: 'Horas',
-            backgroundColor: 'rgb(255, 0, 0 )',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [2],   
-        }
-    ]
-
+            label: 'My First Dataset',
+            data: [20, 50, 70, 100],
+            backgroundColor: [
+                'rgb(255, 0, 0)',
+                'rgb(0, 255, 255)',
+                'rgb(0, 0, 255)',
+                'rgb(255, 0, 255)'
+            ],
+            hoverOffset: 4
+        }]
     };
+
+    const config = {
+        type: 'doughnut',
+        data: data,
+    };
+</script>
+
+
+<script>
+    const myChart3 = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
+
+
+
+<!-- Graficos lado B -->
+<script>
+    const labels = [
+        '1° Andar',
+        '2° Andar',
+        '3° Andar',
+        '4° Andar',
+    ];
 
     const data2 = {
         labels: labels,
@@ -272,10 +304,16 @@
         }]
     };
 
-    const config = {
-        type: 'doughnut',
-        data: data,
-        options: {}
+
+
+    const data3 = {
+        labels: labels,
+        datasets: [{
+            label: 'Horas',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 2, 1, 0, 1],
+        }]
     };
 
     const config2 = {
@@ -283,19 +321,32 @@
         data: data2,
         options: {}
     };
+
+    const config3 = {
+        type: 'line',
+        data: data3,
+        options: {}
+    };
 </script>
 
 <script>
     const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
-
-    const myChart2 = new Chart(
         document.getElementById('myChart2'),
         config2
     );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
 </script>
+
+
+
+
+
+
+
 
 <script>
     var now = new Date()
