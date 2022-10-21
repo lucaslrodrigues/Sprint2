@@ -295,18 +295,27 @@
 
 </html>
 <script>
-    // Partindo do pressuposto de que o cliente ocupa apenas 60% do estácionamento (media de SP)
+    
     calcular()
     function calcular() {
+        // 12 horas é a média de tempo em que um estacionamento está em funcionamento em SP
         var valorhora = Number(valor.value) * 12
+
+        // Pressuposto de que cliente ocupa apenas 60% do estácionamento 60% = 0.6
         var semservico = Number(qtdvagas.value) * 0.6
+
+        // Valor em que o cliente ganha em  um mês (30 dias) 
         var sem_ganho_mes = (semservico * valorhora) * 30
         tot_sem.innerHTML = `<b>R$<span class="res_numeros">${sem_ganho_mes.toFixed(2)}</span></b>`
 
+        // Valor total em que o cliente poderia ganhar com a systoyanka
         var comservico = Number(qtdvagas.value)
+
+        // Valor que o cliente ganharia com 90% do estacionamento ocupado em um mês
         var com_ganho_mes = ((comservico * valorhora) * 30) * 0.9
         tot_ganho.innerHTML = `<b>R$<span class="res_numeros">${com_ganho_mes.toFixed(2)}</span></b>`
 
+        // Subtraindo o valor total dos meses (com o serviço e sem serviço) temos o quanto o cliente perde sem o nosso sistema
         var prejuizo = com_ganho_mes - sem_ganho_mes
         valor_perdas.innerHTML = `<b>R$<span class="res_numeros">${prejuizo.toFixed(2)}</span></b>`
     }
